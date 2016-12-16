@@ -7,7 +7,7 @@ const success = (data) => {
 
 
 const failure = (error) => {
-  console.log('fail');
+  console.log('failure is', error);
 };
 
 module.exports = {

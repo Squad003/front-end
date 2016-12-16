@@ -18,6 +18,11 @@ body {
 
 .nav > li > a {
   color: $white;
+  }
+
+.nav > li > a:hover {
+  background-color: $pink;
+  color: $white;
 }
 
 .combo-modal {
