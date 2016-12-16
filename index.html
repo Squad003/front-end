@@ -104,7 +104,7 @@
          </div>
          <div class="form-group">
            <label for="exampleInputPassword1">Repeat Password</label>
-           <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password_confirmation]" placeholder="Password">
+           <input type="password" class="form-control" id="exampleInputPassword" name="credentials[password_confirmation]" placeholder="Password">
          </div>
          <button type="submit" class="btn btn-primary" id="sign-up-submit">Submit</button>
          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -117,31 +117,31 @@
 <!--END SIGN UP MODAL-->
 
   <!--  SIGN IN MODAL-->
-    <div class="modal fade" id="sign-in-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="sign-in-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+      </div>
+      <div class="modal-body">
+          <form class="sign-in-form">
+           <div class="form-group">
+             <label>E-Mail</label>
+             <input type="email" id="sign-in-email" class="form-control" name="credentials[email]" placeholder="Email">
+           </div>
+           <div class="form-group">
+             <label for="exampleInputPassword1">Password</label>
+             <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
+           </div>
+           <button type="submit" class="btn btn-primary" id="sign-in-submit">Submit</button>
+           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </form>
+          <div class="sign-in-fail"></div>
+        </div>
+      </div>
     </div>
-    <div class="modal-body">
-        <form class="sign-in-form">
-         <div class="form-group">
-           <label>E-Mail</label>
-           <input type="email" id="sign-in-email" class="form-control" name="credentials[email]" placeholder="Email">
-         </div>
-         <div class="form-group">
-           <label for="exampleInputPassword1">Password</label>
-           <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
-         </div>
-         <button type="submit" class="btn btn-primary" id="sign-in-submit">Submit</button>
-         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        </form>
-        <div class="sign-in-fail"></div>
-    </div>
-    </div>
-    </div>
-    </div>
+  </div>
   <!--END SIGN IN MODAL-->
 
   <!--  CHANGE PASSWORD MODAL-->
@@ -190,6 +190,53 @@
       </div>
     </div>
   </div>
+</div>
+<!--COMBO MODAL-->
+<div class="modal fade" id="combo-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+    </div>
+    <div class="modal-body">
+      <form class="sign-up-form">
+        <div class="form-group">
+          <label>E-Mail</label>
+          <input type="email" id="sign-up-email" class="form-control" name="credentials[email]" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Repeat Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword" name="credentials[password_confirmation]" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary" id="sign-up-submit">Submit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </form>
+      <div class="sign-up-fail"></div>
+    </div>
+    <div class="combo-form"></div>
+    <div class="modal-body">
+      <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+        <form class="sign-in-form">
+         <div class="form-group">
+           <label>E-Mail</label>
+           <input type="email" id="sign-in-email" class="form-control" name="credentials[email]" placeholder="Email">
+         </div>
+         <div class="form-group">
+           <label for="exampleInputPassword1">Password</label>
+           <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
+         </div>
+         <button type="submit" class="btn btn-primary" id="sign-in-submit">Submit</button>
+         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </form>
+        <div class="sign-in-fail"></div>
+      </div>
+  </div>
+</div>
 </div>
 
 

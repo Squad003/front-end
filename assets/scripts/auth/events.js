@@ -7,12 +7,10 @@ const ui = require('./ui');
 
 
 // $('.container').hide();
-// $('.change-password-button').hide();
-// $('.log-out-button').hide();
+$('.change-password-button').hide();
+$('.log-out-button').hide();
 
-// $(window).load(function(){
-//     $('#welcome-form').modal('show');
-// });
+
 
 // const onSignUp = function (event) {
 //   event.preventDefault();

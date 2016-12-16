@@ -4,14 +4,14 @@ const store = require('../store.js');
 const successError = require('./success-error-handlers.js');
 
 const success = (data) => {
-  // successError.authSuccess();
+  successError.authSuccess();
   console.log("data is", data);
 };
 
 
 
 const failure = (error) => {
-  // successError.authFail();
+  successError.authFail();
   console.log('fail');
 };
 
