@@ -16,18 +16,19 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
-  // $('.container').show();
   store.user = data.user;
-  // $('.log-in').hide();
-  // $('.change-password-button').show();
-  // $('.log-out-button').show();
   success(data);
+  $('.change-password-button').show();
+  $('.log-out-button').show();
+  $('#combo-form').modal('hide');
+  $('.sign-in-button').hide();
+  $('.sign-up-button').hide();
   console.log("nice job fuck boi");
 };
 
 const logOutSuccess = () => {
   // $('.container').hide();
-  // $('#log-out').modal('hide');
+  $('#log-out').modal('hide');
   // $('.change-password-button').hide();
   // $('.log-out-button').hide();
   console.log("peace");
