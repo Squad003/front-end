@@ -9,7 +9,7 @@
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
         <!--NAVBAR STARTS-->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-transparent">
     <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -63,7 +63,7 @@
               <button type="button" class="btn btn-primary btn-lg log-out-button" data-toggle="modal" data-target="#log-out">
                 Log Out
               </button>
-            </a
+            </a>
         </li>
         </ul>
       </li>
@@ -75,12 +75,8 @@
 
     <!--content starts-->
     <body class="container-fluid">
-      <h1>Chudlr</h1>
+      <h1>Chundlr</h1>
       <h2>Don't confuse us, we're BETTER than Tumblr</h2>
-        <form>
-          <input type="text">
-          <input type="submit">
-        </form>
 
 
         <!--Modals start-->
@@ -192,7 +188,7 @@
   </div>
 </div>
 <!--COMBO MODAL-->
-<div class="modal fade" id="combo-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade combo-modal" id="combo-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -203,7 +199,7 @@
       <form class="sign-up-form">
         <div class="form-group">
           <label>E-Mail</label>
-          <input type="email" id="sign-up-email" class="form-control" name="credentials[email]" placeholder="Email">
+          <input type="email" id="sign-up-email2" class="form-control" name="credentials[email]" placeholder="Email">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
@@ -213,7 +209,7 @@
           <label for="exampleInputPassword1">Repeat Password</label>
           <input type="password" class="form-control" id="exampleInputPassword" name="credentials[password_confirmation]" placeholder="Password">
         </div>
-        <button type="submit" class="btn btn-primary" id="sign-up-submit">Submit</button>
+        <button type="submit" class="btn btn-primary" id="sign-up">Submit</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
       </form>
       <div class="sign-up-fail"></div>
@@ -224,19 +220,29 @@
         <form class="sign-in-form">
          <div class="form-group">
            <label>E-Mail</label>
-           <input type="email" id="sign-in-email" class="form-control" name="credentials[email]" placeholder="Email">
+           <input type="email" id="sign-in-email2" class="form-control" name="credentials[email]" placeholder="Email">
          </div>
          <div class="form-group">
            <label for="exampleInputPassword1">Password</label>
            <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
          </div>
-         <button type="submit" class="btn btn-primary" id="sign-in-submit">Submit</button>
+         <button type="submit" class="btn btn-primary" id="sign-in-submit2">Submit</button>
          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         </form>
         <div class="sign-in-fail"></div>
       </div>
   </div>
 </div>
+</div>
+
+<!--Crud Functions-->
+<div class="crud-buttons">
+  <form class="button-functions">
+<button type="button" class="btn btn-danger">Delete Post</button>
+<div
+<button type="button" class="btn btn-success">Post</button>
+<button type="button" class="btn btn-primary">Show all Posts</button>
+</form>
 </div>
 
 
