@@ -8,6 +8,7 @@
       <script src="dependencies.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+      <body class="container-fluid">
         <!--NAVBAR STARTS-->
     <nav class="navbar navbar-transparent">
     <div class="container-fluid">
@@ -74,9 +75,35 @@
     <!--NAVBAR ENDS-->
 
     <!--content starts-->
-    <body class="container-fluid">
+
       <h1>Chundlr</h1>
       <h2>Don't confuse us, we're BETTER than Tumblr</h2>
+
+      <!--Crud Functions
+      <div class="crud-buttons">
+        <form class="button-functions">
+      <button type="button" class="btn btn-danger">Delete Post</button>
+      <div
+      <button type="button" class="btn btn-success">Post</button>
+      <button type="button" class="btn btn-primary">Show all Posts</button>
+      </form>
+    </div>-->
+
+<div class="container blog-post">
+  <form class="blog-submit">
+    <div class="row row-centered">
+      <div class="col-xs-3 col-centered box">
+        <div class="content text-center">
+          <input type="text" placeholder="put title here" name="blogpost[title]">
+          <input type="text" placeholder="put content here" name="blogpost[content]">
+        </div>
+      </div>
+      <div class="col-xs-3 col-centered box">
+        <div class="content text-center"><input type="submit" value="Suja" class="prevent-default btn btn-primary"></div>
+      </div>
+    </div>
+  </form>
+</div>
 
 
         <!--Modals start-->
@@ -235,15 +262,6 @@
 </div>
 </div>
 
-<!--Crud Functions-->
-<div class="crud-buttons">
-  <form class="button-functions">
-<button type="button" class="btn btn-danger">Delete Post</button>
-<div
-<button type="button" class="btn btn-success">Post</button>
-<button type="button" class="btn btn-primary">Show all Posts</button>
-</form>
-</div>
 
 
     </body>
