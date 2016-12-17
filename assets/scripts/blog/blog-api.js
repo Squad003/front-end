@@ -32,14 +32,25 @@ const indexMyPosts = () =>
     },
   });
 
-  const deletePost = (id) =>
-    $.ajax({
-      url: config.host + '/blogposts/' + id,
-      method: 'DELETE',
-      headers: {
-        Authorization: 'Token token=' + store.user.token,
-      },
-    });
+
+const editPost = (id, data) =>
+  $.ajax({
+    url: config.host + '/blogposts/' + id,
+    method: 'PATCH',
+    data,
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    },
+  });
+
+const deletePost = (id) =>
+  $.ajax({
+    url: config.host + '/blogposts/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    },
+  });
 
 
 
@@ -50,6 +61,7 @@ module.exports = {
   indexPosts,
   indexMyPosts,
   deletePost,
+  editPost,
 
 
 };

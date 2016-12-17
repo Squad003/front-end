@@ -30,11 +30,26 @@ const onIndexMyPosts = function (event) {
     .catch(ui.failure);
   };
 
+const onEditPost = function(event){
+  event.preventDefault();
+  let id = $(event.target).data('id');
+  let data = getFormFields(this);
+  api.editPost(id, data)
+    .then(ui.onEditPostSuccess)
+    .catch(ui.failure);
+};
+
+const showUpdate = (e) => {
+  let className = '.blog-edit-' + $(e.target).data('id');
+  $(className).removeClass('hidden');
+
+};
+
 const onDeletePost = function(event){
   event.preventDefault();
   let id = $(this).data('id');
   api.deletePost(id)
-    .then(ui.onDeletePost)
+    .then(ui.onDeletePostSuccess)
     .catch(ui.failure);
 };
 
@@ -43,7 +58,8 @@ $('.blog-submit').on('submit', onNewPost);
 $('.show-posts').on('click', onIndexPosts);
 $('.show-my-posts').on('click', onIndexMyPosts);
 $('.show-all-my-posts').on('click', '.delete-post-button', onDeletePost);
-
+$('.show-all-my-posts').on('click', '.edit-post-button', showUpdate);
+$('.show-all-my-posts').on('submit', '.blog-edit', onEditPost)
 
 };
 

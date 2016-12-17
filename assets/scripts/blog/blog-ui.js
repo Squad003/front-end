@@ -19,6 +19,16 @@ const onIndexPostsSuccess = (data) => {
 const onIndexMyPostsSuccess = (data) => {
   console.log("data is", data);
   $('.show-all-my-posts').html(showMyPosts(data));
+
+};
+
+
+const onEditPostSuccess = (data) => {
+  console.log("data is", data);
+};
+
+const onDeletePostSuccess = (data) => {
+  console.log("data is", data);
 };
 
 module.exports = {
@@ -26,6 +36,7 @@ module.exports = {
   success,
   onIndexPostsSuccess,
   onIndexMyPostsSuccess,
-
+  onDeletePostSuccess,
+  onEditPostSuccess,
 
 };
