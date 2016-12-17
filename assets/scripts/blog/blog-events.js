@@ -16,8 +16,16 @@ const onNewPost = function (event) {
   };
 
 
+const onIndexPosts = function (event){
+  event.preventDefault();
+  api.indexPosts()
+    .then(ui.onIndexPostsSuccess)
+    .catch(ui.failure);
+}
+
 const addHandlers = () => {
 $('.blog-submit').on('submit', onNewPost);
+$('.show-posts').on('click', onIndexPosts);
 
 };
 

@@ -14,7 +14,19 @@ const newPost = (data) =>
     },
   });
 
+const indexPosts = () =>
+  $.ajax({
+    url: config.host + '/blogposts',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    },
+  })
+
+
 module.exports = {
   newPost,
+  indexPosts,
+
 
 };
