@@ -1,16 +1,15 @@
 'use strict';
 
 const getFormFields = require(`../../../lib/get-form-fields`);
+const papi = require('../page/page-api');
+const pui = require('../page/page-ui');
 
 const api = require('./api');
 const ui = require('./ui');
 
-
 // $('.container').hide();
 $('.change-password-button').hide();
 $('.log-out-button').hide();
-
-
 
 // const onSignUp = function (event) {
 //   event.preventDefault();
@@ -40,7 +39,12 @@ const onSignIn = function (event) {
   event.preventDefault();
   let data = getFormFields(this);
   api.signIn(data)
-    .then(ui.signInSuccess)
+    .then((response) => {
+      console.log('response is ', response);
+      ui.signInSuccess(response);
+      return papi.indexMyPages();
+    })
+    .then(pui.indexMyPagesSuccess)
     .catch(ui.failure);
 };
 
@@ -52,13 +56,12 @@ const onChangePassword = function (event) {
     .catch(ui.failure);
 };
 
-const onSignOut = function (event){
-    event.preventDefault();
-    api.signOut()
-      .then(ui.logOutSuccess)
-      .catch(ui.failure);
+const onSignOut = function (event) {
+  event.preventDefault();
+  api.signOut()
+    .then(ui.logOutSuccess)
+    .catch(ui.failure);
 };
-
 
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp);

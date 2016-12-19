@@ -2,13 +2,12 @@
 
 const store = require('../store.js');
 const successError = require('./success-error-handlers.js');
+const showPages = require('../handlebars/show-pages.handlebars');
 
 const success = (data) => {
   successError.authSuccess();
-  console.log("data is", data);
+  console.log('data is', data);
 };
-
-
 
 const failure = (error) => {
   successError.authFail();
@@ -23,17 +22,16 @@ const signInSuccess = (data) => {
   $('#combo-form').modal('hide');
   $('.sign-in-button').hide();
   $('.sign-up-button').hide();
-  console.log("nice job fuck boi");
+  console.log('nice job fuck boi');
 };
 
 const logOutSuccess = () => {
   // $('.container').hide();
   $('#log-out').modal('hide');
-  // $('.change-password-button').hide();
-  // $('.log-out-button').hide();
-  console.log("peace");
+  $('.change-password-button').hide();
+  $('.log-out-button').hide();
+  console.log('peace');
 };
-
 
 module.exports = {
   failure,

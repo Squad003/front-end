@@ -1,0 +1,18 @@
+{{#each pages as |page|}}
+
+<div class="row row-centered">
+  <div class="col-xs-4 col-centered box">
+    <div class="content-{{page.id}} content page-name">title: {{page.title}} </div>
+  </div>
+  <div class="col-xs-4 col-centered box">
+    <div class="content-{{page.id}} content page-due">body: {{page.content}}</div>
+  </div>
+  <div class="col-xs-4 col-centered box complete-page">
+    <button type="button" class="delete-post-button btn btn-success" data-id="{{page._id}}">Delete-ja</button>
+  </div>
+  <div class="col-xs-4 col-centered box complete-page">
+    <button type="button" class="edit-post-button btn btn-success" data-id="{{page._id}}">edit</button>
+  </div>
+</div>
+
+{{/each}}

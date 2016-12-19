@@ -3,11 +3,10 @@
 const config = require('../config');
 const store = require('../store');
 
-
 const newPost = (data) =>
   $.ajax({
     url: config.host + '/blogposts',
-    method:'POST',
+    method: 'POST',
     data,
     headers: {
       Authorization: 'Token token=' + store.user.token,
@@ -32,7 +31,6 @@ const indexMyPosts = () =>
     },
   });
 
-
 const editPost = (id, data) =>
   $.ajax({
     url: config.host + '/blogposts/' + id,
@@ -52,16 +50,11 @@ const deletePost = (id) =>
     },
   });
 
-
-
-
-
 module.exports = {
   newPost,
   indexPosts,
   indexMyPosts,
   deletePost,
   editPost,
-
 
 };
