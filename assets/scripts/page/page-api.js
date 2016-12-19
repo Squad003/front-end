@@ -32,8 +32,18 @@ const editPage = (id, data) =>
     },
   });
 
+const deletePage = (id) =>
+  $.ajax({
+    url: config.host + '/pages/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    },
+  });
+
 module.exports = {
   newPage,
   indexMyPages,
+  deletePage,
   editPage,
 };

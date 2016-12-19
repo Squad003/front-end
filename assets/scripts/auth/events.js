@@ -40,7 +40,6 @@ const onSignIn = function (event) {
   let data = getFormFields(this);
   api.signIn(data)
     .then((response) => {
-      console.log('response is ', response);
       ui.signInSuccess(response);
       return papi.indexMyPages();
     })
