@@ -22,12 +22,16 @@ const signInSuccess = (data) => {
   $('#combo-form').modal('hide');
   $('.sign-in-button').hide();
   $('.sign-up-button').hide();
-  console.log('nice job fuck boi');
+  $('.show-pages').show();
+  console.log('nice job fuck boi juice');
 };
 
 const logOutSuccess = () => {
   // $('.container').hide();
   $('#log-out').modal('hide');
+  $('.sign-in-button').show();
+  $('.sign-up-button').show();
+  $('.show-pages').hide();
   $('.change-password-button').hide();
   $('.log-out-button').hide();
   console.log('peace');
