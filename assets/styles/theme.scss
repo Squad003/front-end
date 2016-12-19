@@ -4,17 +4,13 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  color: $white;
-  font-size: 20px;
-  text-align: center;
-}
-
 body {
   background-image: url('./lookup.jpg');
-  background-repeat: default;
-  background-size: 1080px 1080px;
+  background-repeat: repeat;
+  // background-size: 1080px 1080px;
+  background-size: cover;
   }
+
 
 .nav > li > a {
   color: $white;
@@ -43,4 +39,35 @@ body {
 
 .blog-edit {
   color: $pink;
+}
+
+
+.show-my-posts {
+  top: 150px;
+  right: 10px;
+  position: fixed;
+}
+
+.show-posts {
+  top: 200px;
+  right: 10px;
+  position: fixed;
+}
+
+.text-submit {
+  left: 250px;
+  top: 123px;
+  position: relative;
+}
+
+.text-box {
+  left: 300px;
+  top: 50px;
+  position: relative;
+}
+
+.title-post {
+  left: 274px;
+  top: 45px;
+  position: relative;
 }

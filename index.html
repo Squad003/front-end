@@ -73,7 +73,6 @@
     <!--content starts-->
 
       <h1>Chundlr</h1>
-      <h2>Don't confuse us, we're BETTER than Tumblr</h2>
 
 
 <div class="container blog-post">
@@ -81,21 +80,23 @@
     <div class="row row-centered">
       <div class="col-xs-3 col-centered box">
         <div class="content text-center">
-          <input type="text" placeholder="put title here" name="blogpost[title]">
-          <textarea rows="4" cols="30" placeholder="put content here" name="blogpost[content]"></textarea>
+          <input type="text" placeholder="put title here" class="title-post" name="blogpost[title]">
+          <textarea rows="4" cols="30" placeholder="put content here" class="text-box" name="blogpost[content]"></textarea>
         </div>
       </div>
         <div class="col-xs-3 col-centered box">
-          <div class="content text-center"><input type="submit" value="Suja" class="btn btn-default"></div>
+          <div class="content text-center"><input type="submit" value="Submit" class="btn btn-primary text-submit"></div>
         </div>
-      <div class="col-xs-3 col-centered box">
-        <div class="content text-center"><button type="button" class="btn btn-default show-posts">SHOW-JA</button></div>
-      </div>
-      <div class="col-xs-3 col-centered box">
-        <div class="content text-center"><button type="button" class="btn btn-default show-my-posts">SHOW-JA MY POSTS</button></div>
-      </div>
     </div>
   </form>
+</div>
+
+<div class="col-xs-3 col-centered box">
+  <div class="content text-center"><button type="button" class="btn btn-default show-posts">Show all posts</button></div>
+</div>
+
+<div class="col-xs-3 col-centered box">
+  <div class="content text-center"><button type="button" class="btn btn-default show-my-posts">Show My Posts</button></div>
 </div>
 
 <div class="show-all-my-posts"></div>
