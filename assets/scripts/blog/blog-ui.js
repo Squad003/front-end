@@ -2,12 +2,19 @@
 
 const showMyPosts = require('../handlebars/show-posts.handlebars');
 
-const success = (data) => {
-  console.log('data is', data);
+const clearForms = () => {
+  $('input').val('');
+  $('textarea').val('');
+};
+
+const success = () => {
+  $('#new-post-form').modal('hide');
+  clearForms();
 };
 
 const failure = (error) => {
   console.log('failure is', error);
+  $('.post-failure').html('Suja up.');
 };
 
 const indexPostsSuccess = (data) => {

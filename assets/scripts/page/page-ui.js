@@ -2,10 +2,16 @@
 
 const showPages = require('../handlebars/show-pages.handlebars');
 
+const clearForms = () => {
+  $('input').val('');
+  $('textarea').val('');
+};
+
 const success = (data) => {
   console.log('data is ', data);
   $('.show-pages').html(showPages(data));
   $('#new-page-form').modal('hide');
+  clearForms();
 };
 
 const indexMyPagesSuccess = (data) => {

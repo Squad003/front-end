@@ -4,6 +4,10 @@ const store = require('../store.js');
 const successError = require('./success-error-handlers.js');
 const showPages = require('../handlebars/show-pages.handlebars');
 
+const clearForms = () => {
+  $('input').val('');
+};
+
 const success = (data) => {
   successError.authSuccess();
   console.log('data is', data);
@@ -34,6 +38,7 @@ const logOutSuccess = () => {
   $('.show-pages').hide();
   $('.change-password-button').hide();
   $('.log-out-button').hide();
+  clearForms();
   console.log('peace');
 };
 

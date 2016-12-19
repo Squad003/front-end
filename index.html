@@ -1,107 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Chundlr</title>
 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Chundlr</title>
 
-      <script src="dependencies.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-      <body class="container-fluid">
-        <!--NAVBAR STARTS-->
-    <nav class="navbar navbar-transparent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="dependencies.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+  <!--NAVBAR STARTS-->
+  <nav class="navbar navbar-transparent">
     <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
       <span class="sr-only">Toggle navigation</span>
     </button>
-    <a class="navbar-brand" href="#"></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <form class="navbar-form navbar-left">
-      <div class="form-group">
+        <a class="navbar-brand" href="#"></a>
       </div>
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign Up / Sign In <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li>
-            <a>
-              <!-- Button trigger modal Sign Up -->
-              <button type="button" class="btn btn-default btn-lg sign-up-button" data-toggle="modal" data-target="#sign-up-form">
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+          </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign Up / Sign In <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a>
+                  <!-- Button trigger modal Sign Up -->
+                  <button type="button" class="btn btn-default btn-lg sign-up-button" data-toggle="modal" data-target="#sign-up-form">
                 Sign Up
               </button>
-            </a>
-          </li>
-          <li>
-            <a>
-              <!-- Button trigger modal Sign In -->
-              <button type="button" class="btn btn-default btn-lg sign-in-button" data-toggle="modal" data-target="#sign-in-form">
+                </a>
+              </li>
+              <li>
+                <a>
+                  <!-- Button trigger modal Sign In -->
+                  <button type="button" class="btn btn-default btn-lg sign-in-button" data-toggle="modal" data-target="#sign-in-form">
                 Sign In
               </button>
-            </a>
-          </li>
-          <li>
-            <a>
-              <!-- Button trigger modal Change Password -->
-              <button type="button" class="btn btn-primary btn-lg change-password-button" data-toggle="modal" data-target="#change-password-form">
+                </a>
+              </li>
+              <li>
+                <a>
+                  <!-- Button trigger modal Change Password -->
+                  <button type="button" class="btn btn-primary btn-lg change-password-button" data-toggle="modal" data-target="#change-password-form">
                 Change Password
               </button>
-            </a>
-        </li>
-          <li>
-            <a>
-              <!-- Button trigger modal LOG OUT -->
-              <button type="button" class="btn btn-default btn-lg log-out-button" data-toggle="modal" data-target="#log-out">
+                </a>
+              </li>
+              <li>
+                <a>
+                  <!-- Button trigger modal LOG OUT -->
+                  <button type="button" class="btn btn-default btn-lg log-out-button" data-toggle="modal" data-target="#log-out">
                 Log Out
               </button>
-            </a>
-        </li>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
-      </li>
-    </ul>
-    </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    </nav>
-    <!--NAVBAR ENDS-->
-
-    <!--content starts-->
-
-      <h1>Chundlr</h1>
-
-<!--Text box properties-->
-<div class="container blog-post">
-  <form class="blog-submit">
-    <div class="row row-centered">
-      <div class="col-xs-3 col-centered box">
-        <div class="content text-center">
-          <input type="text" placeholder="put title here" class="title-post" name="blogpost[title]">
-          <textarea rows="4" cols="30" placeholder="put content here" class="text-box" name="blogpost[content]"></textarea>
-        </div>
       </div>
-        <div class="col-xs-3 col-centered box">
-          <div class="content text-center"><input type="submit" value="Submit" class="btn btn-primary text-submit"></div>
-        </div>
+      <!-- /.navbar-collapse -->
     </div>
-  </form>
-</div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!--NAVBAR ENDS-->
 
+  <!--content starts-->
 
-<!--Dashboard Buttons-->
-<div class="btn-group-vertical">
-  <button type="button" class="btn btn-primary add-new-bp">Add New Blog Post</button>
-  <button type="button" class="btn btn-primary about-button">About</button>
-  <button type="button" class="btn btn-primary add-new-page" data-toggle="modal" data-target="#new-page-form">Add New Page</button>
-</div>
+  <h1>Chundlr</h1>
 
-<div class="show-pages"></div>
+  <!--Dashboard Buttons-->
+  <div class="btn-group-vertical">
+    <button type="button" class="btn btn-primary add-new-bp" data-toggle="modal" data-target="#new-post-form">Add New Blog Post</button>
+    <button type="button" class="btn btn-primary about-button">About</button>
+    <button type="button" class="btn btn-primary add-new-page" data-toggle="modal" data-target="#new-page-form">Add New Page</button>
+  </div>
 
-<!--<div class="col-xs-3 col-centered box">
+  <div class="show-pages"></div>
+
+  <!--<div class="col-xs-3 col-centered box">
   <div class="content text-center"><button type="button" class="btn btn-default show-posts">Show all posts</button></div>
 </div>
 
@@ -112,59 +98,59 @@
 <div class="show-all-my-posts"></div>-->
 
 
-        <!--Modals start-->
-        <!--SIGN UP MODAL-->
-    <div class="modal fade" id="sign-up-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <!--Modals start-->
+  <!--SIGN UP MODAL-->
+  <div class="modal fade" id="sign-up-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="signUpModalLabel">Sign Up</h4>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="signUpModalLabel">Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <form class="sign-up-form">
+            <div class="form-group">
+              <label>E-Mail</label>
+              <input type="email" id="sign-up-email" class="form-control" name="credentials[email]" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Repeat Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword" name="credentials[password_confirmation]" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary" id="sign-up-submit">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </form>
+          <div class="sign-up-fail"></div>
+        </div>
+      </div>
     </div>
-    <div class="modal-body">
-        <form class="sign-up-form">
-         <div class="form-group">
-           <label>E-Mail</label>
-           <input type="email" id="sign-up-email" class="form-control" name="credentials[email]" placeholder="Email">
-         </div>
-         <div class="form-group">
-           <label for="exampleInputPassword1">Password</label>
-           <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
-         </div>
-         <div class="form-group">
-           <label for="exampleInputPassword1">Repeat Password</label>
-           <input type="password" class="form-control" id="exampleInputPassword" name="credentials[password_confirmation]" placeholder="Password">
-         </div>
-         <button type="submit" class="btn btn-primary" id="sign-up-submit">Submit</button>
-         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        </form>
-        <div class="sign-up-fail"></div>
-    </div>
-    </div>
-    </div>
-    </div>
-<!--END SIGN UP MODAL-->
+  </div>
+  <!--END SIGN UP MODAL-->
 
   <!--  SIGN IN MODAL-->
-<div class="modal fade" id="sign-in-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <div class="modal fade" id="sign-in-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="signInModalLabel">Sign In</h4>
-      </div>
-      <div class="modal-body">
+        </div>
+        <div class="modal-body">
           <form class="sign-in-form">
-           <div class="form-group">
-             <label>E-Mail</label>
-             <input type="email" id="sign-in-email" class="form-control" name="credentials[email]" placeholder="Email">
-           </div>
-           <div class="form-group">
-             <label for="exampleInputPassword1">Password</label>
-             <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
-           </div>
-           <button type="submit" class="btn btn-primary" id="sign-in-submit">Submit</button>
-           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <div class="form-group">
+              <label>E-Mail</label>
+              <input type="email" id="sign-in-email" class="form-control" name="credentials[email]" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary" id="sign-in-submit">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           </form>
           <div class="sign-in-fail"></div>
         </div>
@@ -175,81 +161,105 @@
 
   <!--  CHANGE PASSWORD MODAL-->
   <div class="modal fade" id="change-password-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-  <div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title" id="changePasswordModalLabel">Change Password</h4>
-  </div>
-  <div class="modal-body">
-      <form class="change-password-form">
-       <div class="form-group">
-         <label>Old Password</label>
-         <input type="password" id="change-password" class="form-control" name="passwords[old]" placeholder="Old Password">
-       </div>
-       <div class="form-group">
-         <label for="exampleInputPassword1">New Password</label>
-         <input type="password" class="form-control" id="exampleInputPassword1" name="passwords[new]" placeholder="New Password">
-       </div>
-       <button type="submit" class="btn btn-primary" id="change-pw-submit">Submit</button>
-       <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-      </form>
-      <div class="change-pw-fail"></div>
-  </div>
-  </div>
-  </div>
-  </div>
-<!--END CHANGE PASSWORD MODAL-->
-
-<!--LOG OUT!!!!!!!!-->
-
-
-<div class="modal fade" id="log-out" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">👋</h4>
-      </div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="changePasswordModalLabel">Change Password</h4>
+        </div>
         <div class="modal-body">
-        <form class="log-out">
-         <button type="submit" class="btn btn-primary">Log Out</button>
-         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        </form>
+          <form class="change-password-form">
+            <div class="form-group">
+              <label>Old Password</label>
+              <input type="password" id="change-password" class="form-control" name="passwords[old]" placeholder="Old Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">New Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="passwords[new]" placeholder="New Password">
+            </div>
+            <button type="submit" class="btn btn-primary" id="change-pw-submit">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </form>
+          <div class="change-pw-fail"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <!--END CHANGE PASSWORD MODAL-->
 
-<!--Add New Page Modal-->
-<div class="modal fade" id="new-page-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">New Page</h4>
-      </div>
-      <div class="modal-body">
-        <form class="new-page-form">
-          <div class="form-group">
-            <label>New Page Title</label>
-            <input type="text" class="form-control" name="page[title]" placeholder="Page Title">
-          </div>
-          <div class="form-group">
-            <label>New Page Content</label>
-            <textarea rows="4" cols="30" class="form-control" name="page[content]" placeholder="Page Content"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="new-page-submit">Submit</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        </form>
+  <!--LOG OUT!!!!!!!!-->
+
+  <div class="modal fade" id="log-out" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">👋</h4>
+        </div>
+        <div class="modal-body">
+          <form class="log-out">
+            <button type="submit" class="btn btn-primary">Log Out</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <!--Add New Page Modal-->
+  <div class="modal fade" id="new-page-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">New Page</h4>
+        </div>
+        <div class="modal-body">
+          <form class="new-page-form">
+            <div class="form-group">
+              <label>New Page Title</label>
+              <input type="text" class="form-control" name="page[title]" placeholder="Page Title">
+            </div>
+            <div class="form-group">
+              <label>New Page Content</label>
+              <textarea rows="4" cols="30" class="form-control" name="page[content]" placeholder="Page Content"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="new-page-submit">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Add New Blog Post Modal -->
+  <div class="modal fade" id="new-post-form" tabindex="-1" role="dialog" aria-labelledby="newPostModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">New Post</h4>
+        </div>
+        <div class="modal-body">
+          <form class="blog-submit">
+            <div class="form-group">
+              <label>New Post Title</label>
+              <input type="text" class="form-control" name="blogpost[title]" placeholder="Post Title">
+            </div>
+            <div class="form-group">
+              <label>New Post Content</label>
+              <textarea rows="4" cols="30" class="form-control" name="blogpost[content]" placeholder="Post Content"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </form>
+          <div class="post-failure"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!--COMBO MODAL
+  <!--COMBO MODAL
 <div class="modal fade combo-modal" id="combo-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -298,5 +308,6 @@
 </div>
 -->
 
-    </body>
+</body>
+
 </html>
