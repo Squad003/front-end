@@ -10,6 +10,9 @@ const onNewPost = function (event) {
   event.preventDefault();
   let data = getFormFields(this);
   console.log("data is ", data);
+  if(!data.title || !data.content) {
+    return;
+  }
   api.newPost(data)
     .then(ui.success)
     .catch(ui.failure);
