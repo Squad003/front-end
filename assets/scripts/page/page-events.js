@@ -25,8 +25,27 @@ const onIndexMyPages = function (event) {
     .catch(ui.failure);
 };
 
+const showUpdate = (e) => {
+  let className = '.page-edit-' + $(e.target).data('id');
+  $(className).modal('show');
+
+};
+
+const onEditPage = function (event) {
+  event.preventDefault();
+  let id = $(event.target).data('id');
+  debugger;
+  // console.log('id is, ' id);
+  let data = getFormFields(this);
+  api.editPage(id, data)
+    .then(ui.editPageSuccess)
+    .catch(ui.failure);
+};
+
 const addHandlers = () => {
   $('.new-page-form').on('submit', onNewPage);
+  $('.show-pages').on('click', '.edit-page-button', showUpdate);
+  $('.show-pages').on('submit', '.edit-page-form', onEditPage);
 };
 
 module.exports = {

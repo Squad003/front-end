@@ -12,6 +12,11 @@ const indexMyPagesSuccess = (data) => {
   $('.show-pages').html(showPages(data));
 };
 
+const editPageSuccess = (data) => {
+  console.log('some dicks? ', data);
+  $('.edit-page-form').modal('hide');
+};
+
 const failure = (error) => {
   console.log('failure is', error);
 };
@@ -19,5 +24,6 @@ const failure = (error) => {
 module.exports = {
   success,
   indexMyPagesSuccess,
+  editPageSuccess,
   failure,
 };

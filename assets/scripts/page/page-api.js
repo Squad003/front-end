@@ -19,10 +19,21 @@ const indexMyPages = () =>
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token,
-  },
-});
+    },
+  });
+
+const editPage = (id, data) =>
+  $.ajax({
+    url: config.host + '/pages/' + id,
+    method: 'PATCH',
+    data,
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    },
+  });
 
 module.exports = {
   newPage,
   indexMyPages,
+  editPage,
 };

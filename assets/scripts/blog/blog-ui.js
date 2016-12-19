@@ -10,7 +10,7 @@ const failure = (error) => {
   console.log('failure is', error);
 };
 
-const onIndexPostsSuccess = (data) => {
+const indexPostsSuccess = (data) => {
   console.log('data is', data);
 };
 
@@ -31,7 +31,7 @@ const onDeletePostSuccess = (data) => {
 module.exports = {
   failure,
   success,
-  onIndexPostsSuccess,
+  indexPostsSuccess,
   onIndexMyPostsSuccess,
   onDeletePostSuccess,
   onEditPostSuccess,
