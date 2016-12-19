@@ -74,7 +74,7 @@
 
       <h1>Chundlr</h1>
 
-
+<!--Text box properties-->
 <div class="container blog-post">
   <form class="blog-submit">
     <div class="row row-centered">
@@ -91,7 +91,17 @@
   </form>
 </div>
 
-<div class="col-xs-3 col-centered box">
+
+<!--Dashboard Buttons-->
+<div class="btn-group-vertical">
+  <button type="button" class="btn btn-primary add-new-bp">Add New Blog Post</button>
+  <button type="button" class="btn btn-primary about-button">About</button>
+  <button type="button" class="btn btn-primary add-new-page" data-toggle="modal" data-target="#new-page-form">Add New Page</button>
+</div>
+
+
+
+<!--<div class="col-xs-3 col-centered box">
   <div class="content text-center"><button type="button" class="btn btn-default show-posts">Show all posts</button></div>
 </div>
 
@@ -99,7 +109,7 @@
   <div class="content text-center"><button type="button" class="btn btn-default show-my-posts">Show My Posts</button></div>
 </div>
 
-<div class="show-all-my-posts"></div>
+<div class="show-all-my-posts"></div>-->
 
 
         <!--Modals start-->
@@ -210,6 +220,33 @@
     </div>
   </div>
 </div>
+
+<!--Add New Page Modal-->
+<div class="modal fade" id="new-page-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">New Page</h4>
+</div>
+<div class="modal-body">
+    <form class="new-page-form">
+     <div class="form-group">
+       <label>New Page Title</label>
+       <input type="text" class="form-control" name="page[title]" placeholder="Page Title">
+     </div>
+     <div class="form-group">
+       <label>New Page Content</label>
+       <textarea rows="4" cols="30"  class="form-control" name="page[content]" placeholder="Page Content"></textarea>
+     </div>
+     <button type="submit" class="btn btn-primary" id="new-page-submit">Submit</button>
+     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+    </form>
+</div>
+</div>
+</div>
+</div>
+
 
 
 <!--COMBO MODAL
