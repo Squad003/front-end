@@ -32,6 +32,7 @@ const signInSuccess = (data) => {
   $('.dropdown-toggle').text(data.user.email);
   $('.add-new-page').show();
   $('.add-new-bp').show();
+  $('.dashboard-title').show();
 };
 
 const logOutSuccess = () => {
@@ -42,6 +43,12 @@ const logOutSuccess = () => {
   $('.show-pages').hide();
   $('.change-password-button').hide();
   $('.log-out-button').hide();
+  $('.show-pages').hide();
+  $('.dropdown-toggle').text('Sign Up/Sign In');
+  $('.add-new-page').hide();
+  $('.add-new-bp').hide();
+  $('.dashboard-title').hide();
+  $('.show-all-my-posts').hide();
   clearForms();
 };
 

@@ -4,6 +4,13 @@ h1 {
   text-align: center;
 }
 
+.dashboard-title {
+  color: $white;
+  font-size: 20px;
+  text-align: center;
+}
+
+
 body {
   background-image: url('./lookup.jpg');
   background-repeat: repeat;
@@ -71,4 +78,8 @@ body {
   left: 274px;
   top: 45px;
   position: relative;
+}
+
+.user-list {
+  float: right;
 }

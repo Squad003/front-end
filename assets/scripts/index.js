@@ -9,6 +9,7 @@ $(() => {
   pageEvents.addHandlers();
   $('.add-new-page').hide();
   $('.add-new-bp').hide();
+  $('.dashboard-title').hide();
 
   // $('#combo-form').modal('show');
   // $('#combo-form').modal({
