@@ -2,17 +2,17 @@
 
   <div class="post-container">
     <div class="row row-centered">
-      <div class="col-xs-4 col-centered box">
-        <div class="content-{{chore.id}} content chore-name">title: {{blogpost.title}} </div>
+      <div class="col-centered box">
+        <div class="content">title: {{blogpost.title}} </div>
+      </div>
+      <div class="col-centered box">
+        <div class="content">body: {{blogpost.content}}</div>
       </div>
       <div class="col-xs-4 col-centered box">
-        <div class="content-{{chore.id}} content chore-due">body: {{blogpost.content}}</div>
+        <button type="button" class="delete-post-button btn btn-danger" data-id="{{blogpost._id}}">Delete</button>
       </div>
-      <div class="col-xs-4 col-centered box complete-chore">
-        <button type="button" class="delete-post-button btn btn-success" data-id="{{blogpost._id}}">Delete-ja</button>
-      </div>
-      <div class="col-xs-4 col-centered box complete-chore">
-        <button type="button" class="edit-post-button btn btn-success" data-id="{{blogpost._id}}">edit</button>
+      <div class="col-xs-4 col-centered box">
+        <button type="button" class="edit-post-button btn btn-success" data-id="{{blogpost._id}}">Edit</button>
       </div>
     </div>
 
@@ -25,7 +25,7 @@
           </div>
         </div>
           <div class="col-xs-3 col-centered box">
-            <div class="content text-center"><button type="submit" class="edit-submit">update-ja</button></div>
+            <div class="content text-center"><button type="submit" class="edit-submit btn btn-success">Update</button></div>
           </div>
         </div>
       </form>

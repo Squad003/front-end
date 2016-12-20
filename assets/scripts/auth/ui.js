@@ -30,6 +30,8 @@ const signInSuccess = (data) => {
   $('.sign-up-button').hide();
   $('.show-pages').show();
   $('.dropdown-toggle').text(data.user.email);
+  $('.add-new-page').show();
+  $('.add-new-bp').show();
 };
 
 const logOutSuccess = () => {
