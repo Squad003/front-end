@@ -1,6 +1,7 @@
 'use strict';
 
 const showPages = require('../handlebars/show-pages.handlebars');
+const showUsersPages = require('../handlebars/show-users-pages.handlebars');
 
 const clearForms = () => {
   $('input').val('');
@@ -22,6 +23,7 @@ const indexMyPagesSuccess = (data) => {
 
 const showOthersPageSuccess = (data) => {
   console.log('data is ', data);
+  $('.user-pages').html(showUsersPages(data));
 };
 
 const editPageSuccess = (data) => {

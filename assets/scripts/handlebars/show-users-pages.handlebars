@@ -1,0 +1,13 @@
+{{#each pages as |page|}}
+
+  <!-- Show Pages -->
+  <div class="row row-centered">
+    <div class="col-xs-4 col-centered box">
+      <div class="content-{{page.id}} content page-name">page: {{page.title}} </div>
+    </div>
+    <div class="col-xs-4 col-centered box">
+      <div class="content-{{page.id}} content page-due">content: {{page.content}}</div>
+    </div>
+  </div>
+
+{{/each}}
