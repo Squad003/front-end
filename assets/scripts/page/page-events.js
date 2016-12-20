@@ -9,9 +9,12 @@ const bui = require('../blog/blog-ui');
 const onNewPage = function (event) {
   event.preventDefault();
   let data = getFormFields(this);
-  console.log('data is ', data);
   api.newPage(data)
-    .then(ui.success)
+    .then(()=> {
+      ui.success();
+      return api.indexMyPages();
+    })
+    .then(ui.indexMyPagesSuccess)
     .catch(ui.failure);
 };
 

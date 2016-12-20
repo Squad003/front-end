@@ -2,14 +2,14 @@
 
   <!-- Show Pages -->
   <div class="row row-centered">
-    <div class="col-xs-4 col-centered box">
+    <div class="col-centered box">
       <div class="content-{{page.id}} content page-name">title: {{page.title}} </div>
     </div>
-    <div class="col-xs-4 col-centered box">
+    <div class="col-centered box">
       <div class="content-{{page.id}} content page-due">body: {{page.content}}</div>
     </div>
     <div class="col-xs-4 col-centered box complete-page">
-      <button type="button" class="delete-page-button btn btn-success" data-id="{{page._id}}">Delete</button>
+      <button type="button" class="delete-page-button btn btn-danger" data-id="{{page._id}}">Delete</button>
     </div>
     <div class="col-xs-4 col-centered box complete-page">
       <button type="button" class="edit-page-button btn btn-success" data-id="{{page._id}}">Edit</button>
