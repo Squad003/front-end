@@ -4,12 +4,13 @@ const store = require('../store.js');
 const successError = require('./success-error-handlers.js');
 const showPages = require('../handlebars/show-pages.handlebars');
 const showUserList = require('../handlebars/show-users.handlebars');
+const api = require('./api');
 
 const clearForms = () => {
   $('input').val('');
 };
 
-const success = (data) => {
+const signUpSuccess = (data) => {
   successError.authSuccess();
   console.log('data is', data);
 };
@@ -21,14 +22,14 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   store.user = data.user;
-  success(data);
+  signUpSuccess(data);
   $('.change-password-button').show();
   $('.log-out-button').show();
   $('#combo-form').modal('hide');
   $('.sign-in-button').hide();
   $('.sign-up-button').hide();
   $('.show-pages').show();
-  console.log('nice job fuck boi juice');
+  $('.dropdown-toggle').text(data.user.email);
 };
 
 const logOutSuccess = () => {
@@ -40,7 +41,6 @@ const logOutSuccess = () => {
   $('.change-password-button').hide();
   $('.log-out-button').hide();
   clearForms();
-  console.log('peace');
 };
 
 const showUsersSuccess = (data) => {
@@ -48,10 +48,15 @@ const showUsersSuccess = (data) => {
   $('.user-list').html(showUserList(data));
 };
 
+const changePasswordSuccess = (data) => {
+  console.log('hi');
+};
+
 module.exports = {
   failure,
-  success,
+  signUpSuccess,
   signInSuccess,
   logOutSuccess,
   showUsersSuccess,
+  changePasswordSuccess,
 };
