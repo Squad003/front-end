@@ -7,6 +7,8 @@ $(() => {
   authEvents.addHandlers();
   blogEvents.addHandlers();
   pageEvents.addHandlers();
+  $('.add-new-page').hide();
+  $('.add-new-bp').hide();
 
   // $('#combo-form').modal('show');
   // $('#combo-form').modal({
