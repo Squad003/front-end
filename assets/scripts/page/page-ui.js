@@ -17,6 +17,7 @@ const success = (data) => {
 const indexMyPagesSuccess = (data) => {
   console.log('data is ', data);
   $('.show-pages').html(showPages(data));
+  $('.show-pages').show();
 };
 
 const editPageSuccess = (data) => {

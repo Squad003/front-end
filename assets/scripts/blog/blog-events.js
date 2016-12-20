@@ -22,7 +22,7 @@ const onIndexPosts = function (event) {
 const onIndexMyPosts = function (event) {
   event.preventDefault();
   api.indexMyPosts()
-    .then(ui.onIndexMyPostsSuccess)
+    .then(ui.indexMyPostsSuccess)
     .catch(ui.failure);
 };
 

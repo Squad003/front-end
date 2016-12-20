@@ -1,8 +1,12 @@
 'use strict';
 
 const getFormFields = require(`../../../lib/get-form-fields`);
+
 const papi = require('../page/page-api');
 const pui = require('../page/page-ui');
+
+const bapi = require('../blog/blog-api');
+const bui = require('../blog/blog-ui');
 
 const api = require('./api');
 const ui = require('./ui');
@@ -43,7 +47,11 @@ const onSignIn = function (event) {
       ui.signInSuccess(response);
       return papi.indexMyPages();
     })
-    .then(pui.indexMyPagesSuccess)
+    .then((response) => {
+      pui.indexMyPagesSuccess(response);
+      return bapi.indexMyPosts();
+    })
+    .then(bui.indexMyPostsSuccess)
     .catch(ui.failure);
 };
 

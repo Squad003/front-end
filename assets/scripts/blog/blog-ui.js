@@ -21,7 +21,7 @@ const indexPostsSuccess = (data) => {
   console.log('data is', data);
 };
 
-const onIndexMyPostsSuccess = (data) => {
+const indexMyPostsSuccess = (data) => {
   console.log('data is', data);
   $('.show-all-my-posts').html(showMyPosts(data));
 
@@ -39,7 +39,7 @@ module.exports = {
   failure,
   success,
   indexPostsSuccess,
-  onIndexMyPostsSuccess,
+  indexMyPostsSuccess,
   onDeletePostSuccess,
   onEditPostSuccess,
 
