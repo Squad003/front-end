@@ -3,6 +3,7 @@
 const store = require('../store.js');
 const successError = require('./success-error-handlers.js');
 const showPages = require('../handlebars/show-pages.handlebars');
+const showUserList = require('../handlebars/show-users.handlebars');
 
 const clearForms = () => {
   $('input').val('');
@@ -43,8 +44,9 @@ const logOutSuccess = () => {
 };
 
 const showUsersSuccess = (data) => {
-  console.log("data is", data);
-}
+  console.log('data is', data);
+  $('.user-list').html(showUserList(data));
+};
 
 module.exports = {
   failure,

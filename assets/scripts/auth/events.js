@@ -75,7 +75,7 @@ const onShowUsers = function (event) {
   api.showUsers()
     .then(ui.showUsersSuccess)
     .catch(ui.error);
-}
+};
 
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp);

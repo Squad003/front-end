@@ -1,0 +1,14 @@
+{{#each users as |user|}}
+
+<div class="row row-centered">
+  <div class="col-xs-4 col-centered box">
+    <div class="content-{{user.email}} content user-name">email: {{user.email}} </div>
+  </div>
+
+  <div class="col-xs-4 col-centered box complete-user">
+    <button type="button" class="go-to-user-button btn btn-success" data-id="{{user._id}}">Go To</button>
+  </div>
+
+</div>
+
+{{/each}}
