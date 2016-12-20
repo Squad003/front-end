@@ -1,7 +1,8 @@
 {{#each pages as |page|}}
 
   <!-- Show Pages -->
-  <div class="row row-centered">
+ <div class="container">
+  <div class="row row-centered col-xs-2">
     <div class="col-centered box">
       <div class="content-{{page.id}} content page-name">title: {{page.title}} </div>
     </div>
@@ -15,8 +16,23 @@
       <button type="button" class="edit-page-button btn btn-success" data-id="{{page._id}}">Edit</button>
     </div>
   </div>
+</div>
 
-  <!-- Edit Page Modal -->
+<form class="edit-page-form page-edit"  data-id="{{page._id}}">
+  <div class="row row-centered">
+    <div class="col-xs-3 col-centered box">
+      <div class="content text-center">
+        <input type="text" placeholder="put title here" name="page[title]">
+        <textarea rows="4" cols="30" placeholder="put content here" name="page[content]"></textarea>
+      </div>
+    </div>
+      <div class="col-xs-3 col-centered box">
+        <div class="content text-center"><button type="submit" class="edit-submit btn btn-success">Update</button></div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Edit Page Modal
   <div class="modal fade page-edit-{{page._id}} edit-page-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -41,5 +57,6 @@
       </div>
     </div>
   </div>
+-->
 
 {{/each}}

@@ -4,11 +4,11 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./blog-api');
 const ui = require('./blog-ui');
 
-const onNewPost = function (event) {
+const onNewPost = function(event) {
   event.preventDefault();
   let data = getFormFields(this);
   api.newPost(data)
-    .then(()=> {
+    .then(() => {
       ui.success();
       return api.indexMyPosts();
     })
@@ -16,27 +16,31 @@ const onNewPost = function (event) {
     .catch(ui.failure);
 };
 
-const onIndexPosts = function (event) {
+const onIndexPosts = function(event) {
   event.preventDefault();
   api.indexPosts()
     .then(ui.indexPostsSuccess)
     .catch(ui.failure);
 };
 
-const onIndexMyPosts = function (event) {
+const onIndexMyPosts = function(event) {
   event.preventDefault();
   api.indexMyPosts()
     .then(ui.indexMyPostsSuccess)
     .catch(ui.failure);
 };
 
-const onEditPost = function (event) {
+const onEditPost = function(event) {
   event.preventDefault();
   let id = $(event.target).data('id');
   let data = getFormFields(this);
   api.editPost(id, data)
-    .then(ui.onEditPostSuccess)
-    .catch(ui.failure);
+  .then(() => {
+    ui.onEditPostSuccess();
+    return api.indexMyPosts();
+  })
+  .then(ui.indexMyPostsSuccess)
+  .catch(ui.failure);
 };
 
 const showUpdate = (e) => {
@@ -45,11 +49,15 @@ const showUpdate = (e) => {
 
 };
 
-const onDeletePost = function (event) {
+const onDeletePost = function(event) {
   event.preventDefault();
   let id = $(this).data('id');
   api.deletePost(id)
-    .then(ui.onDeletePostSuccess)
+    .then(() => {
+      ui.onDeletePostSuccess();
+      return api.indexMyPosts();
+    })
+    .then(ui.indexMyPostsSuccess)
     .catch(ui.failure);
 };
 

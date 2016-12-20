@@ -1,20 +1,24 @@
 {{#each blogposts as |blogpost|}}
 
-  <div class="post-container">
+  <div class="container">
     <div class="row row-centered">
-      <div class="col-centered box">
+      <div class="col-centered box col-sm-6">
         <div class="content">title: {{blogpost.title}} </div>
-      </div>
-      <div class="col-centered box">
         <div class="content">body: {{blogpost.content}}</div>
       </div>
-      <div class="col-xs-4 col-centered box">
+      <div class="col-centered box col-sm-6">
+
+      </div>
+    </div>
+      <div class="row row-centered">
+      <div class="col-xs-2 col-centered box">
         <button type="button" class="delete-post-button btn btn-danger" data-id="{{blogpost._id}}">Delete</button>
       </div>
-      <div class="col-xs-4 col-centered box">
+      <div class="col-xs-2 col-centered box">
         <button type="button" class="edit-post-button btn btn-success" data-id="{{blogpost._id}}">Edit</button>
       </div>
     </div>
+  </div>
 
     <form class="blog-edit-{{blogpost._id}} blog-edit hidden"  data-id="{{blogpost._id}}">
       <div class="row row-centered">

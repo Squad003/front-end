@@ -35,8 +35,12 @@ const onEditPage = function (event) {
   let id = $(event.target).data('id');
   let data = getFormFields(this);
   api.editPage(id, data)
-    .then(ui.editPageSuccess)
-    .catch(ui.failure);
+  .then((data) => {
+    ui.editPageSuccess(data);
+    return api.indexMyPages();
+  })
+  .then(ui.indexMyPagesSuccess)
+  .catch(ui.failure);
 };
 
 const onDeletePage = function (event) {
