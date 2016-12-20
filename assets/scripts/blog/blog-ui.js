@@ -27,6 +27,10 @@ const indexMyPostsSuccess = (data) => {
 
 };
 
+const showOtherUsersPostsSuccess =(data) => {
+  console.log('data is ', data);
+};
+
 const onEditPostSuccess = (data) => {
   console.log('data is', data);
 };
@@ -40,6 +44,7 @@ module.exports = {
   success,
   indexPostsSuccess,
   indexMyPostsSuccess,
+  showOtherUsersPostsSuccess,
   onDeletePostSuccess,
   onEditPostSuccess,
 

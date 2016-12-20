@@ -3,6 +3,8 @@
 const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./page-api');
 const ui = require('./page-ui');
+const bapi = require('../blog/blog-api');
+const bui = require('../blog/blog-ui');
 
 const onNewPage = function (event) {
   event.preventDefault();
@@ -46,11 +48,24 @@ const onDeletePage = function (event) {
     .catch(ui.failure);
 };
 
+const onShowOtherUsersData = function(event) {
+  event.preventDefault();
+  let id = $(this).data('id');
+  api.showOtherUsersPages(id)
+    .then((data) => {
+      ui.showOthersPageSuccess(data);
+      return bapi.showOtherUsersPosts(id);
+    })
+    .then(bui.showOtherUsersPostsSuccess)
+    .catch(ui.failure);
+};
+
 const addHandlers = () => {
   $('.new-page-form').on('submit', onNewPage);
   $('.show-pages').on('click', '.edit-page-button', showUpdate);
   $('.show-pages').on('submit', '.edit-page-form', onEditPage);
   $('.show-pages').on('click', '.delete-page-button', onDeletePage);
+  $('.user-list').on('click', '.go-to-user-button', onShowOtherUsersData);
 };
 
 module.exports = {

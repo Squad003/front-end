@@ -15,12 +15,18 @@ const newPage = (data) =>
 
 const indexMyPages = () =>
   $.ajax({
-    url: config.host + '/pages/' + store.user._id,
+    url: config.host + '/pages/me/' + store.user._id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token,
     },
   });
+
+const showOtherUsersPages = (id) =>
+$.ajax({
+  url: config.host + '/pages/' + id,
+  method: 'GET',
+});
 
 const editPage = (id, data) =>
   $.ajax({
@@ -46,4 +52,5 @@ module.exports = {
   indexMyPages,
   deletePage,
   editPage,
+  showOtherUsersPages,
 };
