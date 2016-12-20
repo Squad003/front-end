@@ -3,12 +3,15 @@
   <!-- Show Pages -->
   <div class="row row-centered">
     <div class="col-xs-4 col-centered box">
-      <button type="button" data-id="{{page._id}}"class="btn btn-success show-page-button">{{page.title}}</button>
+      <button type="button" data-id="{{page._id}}"class="btn btn-success show-page-button btn-group btn-group-justified">{{page.title}}</button>
     </div>
+
+    <!--
     <div class="col-xs-4 col-centered box">
-      <div class="content-{{page._id}} content hidden">content: {{page.content}}</div>
+      <div class="content-{{page._id}} content">content: {{page.content}}</div>
 
     </div>
+  -->
   </div>
 
 {{/each}}

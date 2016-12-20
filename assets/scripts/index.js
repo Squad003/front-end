@@ -7,11 +7,11 @@ $(() => {
   authEvents.addHandlers();
   blogEvents.addHandlers();
   pageEvents.addHandlers();
-  $('#combo-form').modal('show');
+
+  // $('#combo-form').modal('show');
   // $('#combo-form').modal({
   // backdrop: 'static',
   // keyboard: false
-// });
-
+  // });
 
 });

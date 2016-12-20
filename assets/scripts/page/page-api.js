@@ -22,6 +22,12 @@ const indexMyPages = () =>
     },
   });
 
+const showPage = (id) =>
+$.ajax({
+  url: config.host + '/pages/' + id,
+  method: 'GET',
+});
+
 const showOtherUsersPages = (id) =>
 $.ajax({
   url: config.host + '/pages/' + id,
@@ -50,6 +56,7 @@ const deletePage = (id) =>
 module.exports = {
   newPage,
   indexMyPages,
+  showPage,
   deletePage,
   editPage,
   showOtherUsersPages,

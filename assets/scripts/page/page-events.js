@@ -60,10 +60,22 @@ const onShowOtherUsersData = function (event) {
     .catch(ui.failure);
 };
 
-const onPageClick = function () {
-  debugger;
-  let id = $(this).data('id');
-  $('.content-' + id).removeClass('hidden');
+const onPageClick = function (event) {
+  event.preventDefault();
+  let id = $(event.target).data('id');
+  console.log('id is ', id);
+  api.showPage(id)
+    .then((data) => {
+      console.log('data is ', data);
+      $('.show-page-content').html(data.page.content);
+    })
+    .catch(ui.failure);
+
+  // let content = data.page.content;
+  // console.log('page data is ', data);
+
+  // $('.content-' + id).removeClass('hidden');
+  // $('.content-' + id).html(this.page.content);
 };
 
 const addHandlers = () => {
