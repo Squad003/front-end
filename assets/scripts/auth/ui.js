@@ -42,9 +42,14 @@ const logOutSuccess = () => {
   console.log('peace');
 };
 
+const showUsersSuccess = (data) => {
+  console.log("data is", data);
+}
+
 module.exports = {
   failure,
   success,
   signInSuccess,
   logOutSuccess,
+  showUsersSuccess,
 };

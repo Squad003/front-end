@@ -36,9 +36,16 @@ const signOut = () =>
     },
   });
 
+const showUsers = () =>
+  $.ajax({
+    url: config.host + '/users',
+    method: 'GET',
+  });
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  showUsers,
 };

@@ -70,11 +70,19 @@ const onSignOut = function (event) {
     .catch(ui.failure);
 };
 
+const onShowUsers = function (event) {
+  event.preventDefault();
+  api.showUsers()
+    .then(ui.showUsersSuccess)
+    .catch(ui.error);
+}
+
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp);
   $('.sign-in-form').on('submit', onSignIn);
   $('.change-password-form').on('submit', onChangePassword);
   $('.log-out').on('submit', onSignOut);
+  $('.show-users').on('click', onShowUsers);
 };
 
 module.exports = {
