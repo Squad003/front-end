@@ -12,6 +12,7 @@ const success = (data) => {
   console.log('data is ', data);
   $('.show-pages').html(showPages(data));
   $('#new-page-form').modal('hide');
+  $('.new-form-fail').hide();
   clearForms();
 };
 
@@ -37,6 +38,7 @@ const deletePageSuccess = (data) => {
 
 const failure = (error) => {
   console.log('failure is', error);
+  $('.new-form-fail').html('Please enter title and content!');
 };
 
 module.exports = {
