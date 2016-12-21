@@ -13,10 +13,6 @@ $(() => {
   $('.my-pages-header').hide();
   $('.my-blogposts-header').hide();
 
-  // $('#combo-form').modal('show');
-  // $('#combo-form').modal({
-  // backdrop: 'static',
-  // keyboard: false
-  // });
+  $('#combo-form').modal('show');
 
 });
