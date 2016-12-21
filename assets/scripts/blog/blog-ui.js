@@ -28,9 +28,13 @@ const indexMyPostsSuccess = (data) => {
   $('.show-all-my-posts').html(showMyPosts(data));
 };
 
-const showOtherUsersPostsSuccess =(data) => {
+const showOtherUsersPostsSuccess = (data) => {
   console.log('posts are ', data);
+  $('.user-pages').show();
+  $('.user-posts').show();
+  $('.show-page-content').show();
   $('.user-posts').html(showUserPosts(data));
+
 };
 
 const onEditPostSuccess = (data) => {

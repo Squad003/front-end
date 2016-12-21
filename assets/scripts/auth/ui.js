@@ -33,8 +33,10 @@ const signInSuccess = (data) => {
   $('.add-new-page').show();
   $('.add-new-bp').show();
   $('.dashboard-title').show();
-
   $('.show-all-my-posts').show();
+  $('.user-pages').hide();
+  $('.user-posts').hide();
+  $('.show-page-content').hide();
 };
 
 const logOutSuccess = () => {
