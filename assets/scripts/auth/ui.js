@@ -33,6 +33,7 @@ const signInSuccess = (data) => {
   $('.add-new-page').show();
   $('.add-new-bp').show();
   $('.dashboard-title').show();
+
   $('.show-all-my-posts').show();
 };
 

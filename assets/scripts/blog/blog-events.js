@@ -8,7 +8,7 @@ const onNewPost = function(event) {
   event.preventDefault();
   let data = getFormFields(this);
   api.newPost(data)
-    .then(() => {
+      .then(() => {
       ui.success();
       return api.indexMyPosts();
     })
