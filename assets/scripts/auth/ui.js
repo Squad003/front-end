@@ -2,22 +2,21 @@
 
 const store = require('../store.js');
 const successError = require('./success-error-handlers.js');
-const showPages = require('../handlebars/show-pages.handlebars');
+// const showPages = require('../handlebars/show-pages.handlebars');
 const showUserList = require('../handlebars/show-users.handlebars');
-const api = require('./api');
+// const api = require('./api');
 
 const clearForms = () => {
   $('input').val('');
 };
 
-const signUpSuccess = (data) => {
+const signUpSuccess = () => {
   successError.authSuccess();
-  console.log('data is', data);
 };
 
-const failure = (error) => {
+const failure = () => {
   successError.authFail();
-  console.log('fail');
+
 };
 
 const signInSuccess = (data) => {
@@ -61,12 +60,11 @@ const logOutSuccess = () => {
 };
 
 const showUsersSuccess = (data) => {
-  console.log('data is', data);
   $('.user-list').html(showUserList(data));
 };
 
-const changePasswordSuccess = (data) => {
-  console.log('hi');
+const changePasswordSuccess = () => {
+  // console.log('hi');
 };
 
 module.exports = {

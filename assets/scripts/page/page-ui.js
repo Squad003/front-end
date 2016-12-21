@@ -9,7 +9,7 @@ const clearForms = () => {
 };
 
 const success = (data) => {
-  console.log('data is ', data);
+  // console.log('data is ', data);
   $('.show-pages').html(showPages(data));
   $('#new-page-form').modal('hide');
   $('.new-form-fail').hide();
@@ -17,29 +17,27 @@ const success = (data) => {
 };
 
 const indexMyPagesSuccess = (data) => {
-  console.log('data is ', data);
+  // console.log('data is ', data);
   $('.show-pages').html(showPages(data));
   $('.show-pages').show();
 };
 
 const showOthersPageSuccess = (data) => {
-  console.log('data is ', data);
+  // console.log('data is ', data);
   $('.user-pages').html(showUsersPages(data));
   $('.show-page-content').hide();
 };
 
-const editPageSuccess = (data) => {
-  console.log('some dicks? ', data);
+const editPageSuccess = () => {
   $('.edit-page-modal').modal('hide');
   $('.modal-backdrop').remove();
 };
 
-const deletePageSuccess = (data) => {
-  console.log('idk');
+const deletePageSuccess = () => {
+
 };
 
-const failure = (error) => {
-  console.log('failure is', error);
+const failure = () => {
   $('.new-form-fail').html('Please enter title and content!');
 };
 

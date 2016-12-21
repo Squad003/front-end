@@ -12,7 +12,6 @@ $(() => {
   $('.dashboard-title').hide();
   $('.my-pages-header').hide();
   $('.my-blogposts-header').hide();
-
   $('#combo-form').modal('show');
 
 });

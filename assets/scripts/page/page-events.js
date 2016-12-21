@@ -80,10 +80,10 @@ const onShowOtherUsersData = function (event) {
 const onPageClick = function (event) {
   event.preventDefault();
   let id = $(event.target).data('id');
-  console.log('id is ', id);
+  // console.log('id is ', id);
   api.showPage(id)
     .then((data) => {
-      console.log('data is ', data);
+      // console.log('data is ', data);
       $('.show-page-content').html(data.page.content);
       $('.show-page-content').show();
     })
@@ -95,6 +95,8 @@ const onPageClick = function (event) {
   // $('.content-' + id).removeClass('hidden');
   // $('.content-' + id).html(this.page.content);
 };
+
+
 
 const addHandlers = () => {
   $('.new-page-form').on('submit', onNewPage);
