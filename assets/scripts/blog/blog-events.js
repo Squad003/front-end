@@ -16,24 +16,28 @@ const onNewPost = function (event) {
     .catch(ui.failure);
 };
 
-const onIndexPosts = function(event) {
+const onIndexPosts = function (event) {
   event.preventDefault();
   api.indexPosts()
     .then(ui.indexPostsSuccess)
     .catch(ui.failure);
 };
 
-const onIndexMyPosts = function(event) {
+const onIndexMyPosts = function (event) {
   event.preventDefault();
   api.indexMyPosts()
     .then(ui.indexMyPostsSuccess)
     .catch(ui.failure);
 };
 
-const onEditPost = function(event) {
+const onEditPost = function (event) {
   event.preventDefault();
   let id = $(event.target).data('id');
   let data = getFormFields(this);
+  if(!data.blogpost.title || !data.blogpost.content) {
+    $('.post-failure').html('Enter title and content please!');
+    return;
+  }
   api.editPost(id, data)
   .then(() => {
     ui.onEditPostSuccess();

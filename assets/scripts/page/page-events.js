@@ -34,6 +34,11 @@ const onEditPage = function (event) {
   event.preventDefault();
   let id = $(event.target).data('id');
   let data = getFormFields(this);
+  if (!data.page.title || !data.page.content) {
+    $('.page-failure').html('Enter title and content please!');
+    return;
+  }
+
   api.editPage(id, data)
   .then((data) => {
     ui.editPageSuccess(data);
@@ -75,6 +80,7 @@ const onPageClick = function (event) {
     .then((data) => {
       console.log('data is ', data);
       $('.show-page-content').html(data.page.content);
+      $('.show-page-content').show();
     })
     .catch(ui.failure);
 

@@ -25,6 +25,7 @@ const indexMyPagesSuccess = (data) => {
 const showOthersPageSuccess = (data) => {
   console.log('data is ', data);
   $('.user-pages').html(showUsersPages(data));
+  $('.show-page-content').hide();
 };
 
 const editPageSuccess = (data) => {

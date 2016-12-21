@@ -10,6 +10,8 @@ $(() => {
   $('.add-new-page').hide();
   $('.add-new-bp').hide();
   $('.dashboard-title').hide();
+  $('.my-pages-header').hide();
+  $('.my-blogposts-header').hide();
 
   // $('#combo-form').modal('show');
   // $('#combo-form').modal({

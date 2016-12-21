@@ -32,7 +32,6 @@ const showOtherUsersPostsSuccess = (data) => {
   console.log('posts are ', data);
   $('.user-pages').show();
   $('.user-posts').show();
-  $('.show-page-content').show();
   $('.user-posts').html(showUserPosts(data));
 
 };

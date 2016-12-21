@@ -22,8 +22,8 @@
     <div class="row row-centered">
       <div class="col-xs-3 col-centered box">
         <div class="content text-center">
-          <input type="text" placeholder="put title here" name="page[title]">
-          <textarea rows="4" cols="30" placeholder="put content here" name="page[content]"></textarea>
+          <input type="text" value="{{page.title}}" name="page[title]">
+          <textarea rows="4" cols="30" placeholder="put content here" name="page[content]">{{page.content}}</textarea>
         </div>
       </div>
         <div class="col-xs-3 col-centered box">
@@ -31,6 +31,8 @@
         </div>
       </div>
     </form>
+
+      <div class="page-failure"></div>
 
   <!-- Edit Page Modal
   <div class="modal fade page-edit-{{page._id}} edit-page-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

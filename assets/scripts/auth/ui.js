@@ -36,6 +36,8 @@ const signInSuccess = (data) => {
   $('.show-all-my-posts').show();
   $('.user-pages').hide();
   $('.user-posts').hide();
+  $('.my-pages-header').show();
+  $('.my-blogposts-header').show();
   $('.show-page-content').hide();
 };
 
@@ -53,6 +55,8 @@ const logOutSuccess = () => {
   $('.add-new-bp').hide();
   $('.dashboard-title').hide();
   $('.show-all-my-posts').hide();
+  $('.my-pages-header').hide();
+  $('.my-blogposts-header').hide();
   clearForms();
 };
 
