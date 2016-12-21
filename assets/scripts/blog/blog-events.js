@@ -40,7 +40,7 @@ const onEditPost = function (event) {
   }
   api.editPost(id, data)
   .then(() => {
-    ui.onEditPostSuccess();
+    ui.editPostSuccess();
     return api.indexMyPosts();
   })
   .then(ui.indexMyPostsSuccess)
@@ -49,15 +49,15 @@ const onEditPost = function (event) {
 
 const showUpdate = (e) => {
   let className = '.blog-edit-' + $(e.target).data('id');
-  $(className).removeClass('hidden');
+  $(className).modal('show');
 };
 
-const onDeletePost = function(event) {
+const onDeletePost = function (event) {
   event.preventDefault();
   let id = $(this).data('id');
   api.deletePost(id)
     .then(() => {
-      ui.onDeletePostSuccess();
+      ui.deletePostSuccess();
       return api.indexMyPosts();
     })
     .then(ui.indexMyPostsSuccess)

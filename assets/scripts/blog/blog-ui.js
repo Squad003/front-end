@@ -36,11 +36,12 @@ const showOtherUsersPostsSuccess = (data) => {
 
 };
 
-const onEditPostSuccess = (data) => {
+const editPostSuccess = (data) => {
   console.log('data is', data);
+  $('.modal-backdrop').remove();
 };
 
-const onDeletePostSuccess = (data) => {
+const deletePostSuccess = (data) => {
   console.log('data is', data);
 };
 
@@ -50,7 +51,7 @@ module.exports = {
   indexPostsSuccess,
   indexMyPostsSuccess,
   showOtherUsersPostsSuccess,
-  onDeletePostSuccess,
-  onEditPostSuccess,
+  deletePostSuccess,
+  editPostSuccess,
 
 };
