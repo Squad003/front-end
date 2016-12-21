@@ -57,10 +57,10 @@ site that allows for easy creation of blogposts and pages.
 
 
 ## Links
-[Our App](squad003.github.io/front-end)
-[Our Back End Repository](https://github.com/Squad003/squad-project-backend)
-ERD: See Images Folder
-Wire Frames: See Images Folder
+* [Our App](https://squad003.github.io/front-end/)
+* [Our Back End Repository](https://github.com/Squad003/squad-project-backend)
+* ERD: See Images Folder
+* Wire Frames: See Images Folder
 
 ## [License](https://opensource.org/licenses/MIT)
 
