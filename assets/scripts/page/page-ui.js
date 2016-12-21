@@ -33,7 +33,6 @@ const editPageSuccess = (data) => {
 
 const deletePageSuccess = (data) => {
   console.log('idk');
-
 };
 
 const failure = (error) => {

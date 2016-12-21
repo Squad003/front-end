@@ -4,7 +4,7 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./blog-api');
 const ui = require('./blog-ui');
 
-const onNewPost = function(event) {
+const onNewPost = function (event) {
   event.preventDefault();
   let data = getFormFields(this);
   api.newPost(data)
@@ -46,7 +46,6 @@ const onEditPost = function(event) {
 const showUpdate = (e) => {
   let className = '.blog-edit-' + $(e.target).data('id');
   $(className).removeClass('hidden');
-
 };
 
 const onDeletePost = function(event) {
