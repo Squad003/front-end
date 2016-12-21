@@ -25,9 +25,14 @@ const onIndexMyPages = function (event) {
     .catch(ui.failure);
 };
 
+// const showUpdate = (e) => {
+//   let className = '.page-edit-' + $(e.target).data('id');
+//   $(className).removeClass('hidden');
+// };
+
 const showUpdate = (e) => {
   let className = '.page-edit-' + $(e.target).data('id');
-  $(className).removeClass('hidden');
+  $(className).modal('show');
 };
 
 const onEditPage = function (event) {
@@ -94,7 +99,7 @@ const onPageClick = function (event) {
 const addHandlers = () => {
   $('.new-page-form').on('submit', onNewPage);
   $('.show-pages').on('click', '.edit-page-button', showUpdate);
-  $('.show-pages').on('submit', '.page-edit', onEditPage);
+  $('.show-pages').on('submit', '.edit-page-form', onEditPage);
   $('.show-pages').on('click', '.delete-page-button', onDeletePage);
   $('.user-list').on('click', '.go-to-user-button', onShowOtherUsersData);
   $('.user-pages').on('click', '.show-page-button', onPageClick);

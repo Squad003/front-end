@@ -30,7 +30,8 @@ const showOthersPageSuccess = (data) => {
 
 const editPageSuccess = (data) => {
   console.log('some dicks? ', data);
-  $('.edit-page-form').modal('hide');
+  $('.edit-page-modal').modal('hide');
+  $('.modal-backdrop').remove();
 };
 
 const deletePageSuccess = (data) => {

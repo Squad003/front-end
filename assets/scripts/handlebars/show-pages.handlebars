@@ -18,6 +18,7 @@
     </div>
   </div>
 
+<!--
   <form class="page-edit-{{page._id}} page-edit hidden"  data-id="{{page._id}}">
     <div class="row row-centered">
       <div class="col-xs-3 col-centered box">
@@ -31,11 +32,10 @@
         </div>
       </div>
     </form>
+-->
 
-      <div class="page-failure"></div>
-
-  <!-- Edit Page Modal
-  <div class="modal fade page-edit-{{page._id}} edit-page-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <!-- Edit Page Modal -->
+  <div class="modal fade page-edit-{{page._id}} edit-page-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -55,10 +55,10 @@
             <button type="submit" class="btn btn-primary" id="edit-page-submit">Submit</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           </form>
+          <div class="page-failure"></div>
         </div>
       </div>
     </div>
   </div>
--->
 
 {{/each}}
