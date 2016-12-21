@@ -1,6 +1,7 @@
 'use strict';
 
 const showMyPosts = require('../handlebars/show-posts.handlebars');
+const showUserPosts = require('../handlebars/show-users-posts.handlebars');
 
 const clearForms = () => {
   $('input').val('');
@@ -10,37 +11,47 @@ const clearForms = () => {
 const success = () => {
   $('#new-post-form').modal('hide');
   clearForms();
+  $('.post-failure').hide();
 };
 
-const failure = (error) => {
-  console.log('failure is', error);
-  $('.post-failure').html('Suja up.');
+const failure = () => {
+  $('.post-failure').html('Enter title and content');
 };
 
-const indexPostsSuccess = (data) => {
-  console.log('data is', data);
+const indexPostsSuccess = () => {
+
+
 };
 
-const onIndexMyPostsSuccess = (data) => {
-  console.log('data is', data);
+const indexMyPostsSuccess = (data) => {
+  // console.log('posts are', data);
   $('.show-all-my-posts').html(showMyPosts(data));
+};
+
+const showOtherUsersPostsSuccess = (data) => {
+  // console.log('posts are ', data);
+  $('.user-pages').show();
+  // $('.user-posts').show();
+  $('.user-posts').html(showUserPosts(data));
 
 };
 
-const onEditPostSuccess = (data) => {
-  console.log('data is', data);
+const editPostSuccess = (data) => {
+  // console.log('data is', data);
+  $('.modal-backdrop').remove();
 };
 
-const onDeletePostSuccess = (data) => {
-  console.log('data is', data);
+const deletePostSuccess = () => {
+
 };
 
 module.exports = {
   failure,
   success,
   indexPostsSuccess,
-  onIndexMyPostsSuccess,
-  onDeletePostSuccess,
-  onEditPostSuccess,
+  indexMyPostsSuccess,
+  showOtherUsersPostsSuccess,
+  deletePostSuccess,
+  editPostSuccess,
 
 };

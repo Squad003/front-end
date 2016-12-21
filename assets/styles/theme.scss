@@ -4,6 +4,13 @@ h1 {
   text-align: center;
 }
 
+.dashboard-title {
+  color: $white;
+  font-size: 20px;
+  text-align: center;
+}
+
+
 body {
   background-image: url('./lookup.jpg');
   background-repeat: repeat;
@@ -35,6 +42,7 @@ body {
 
 .post-container {
   color: $white;
+  margin: 0 auto;
 }
 
 .blog-edit {
@@ -70,4 +78,22 @@ body {
   left: 274px;
   top: 45px;
   position: relative;
+}
+
+.user-list {
+  float: right;
+}
+
+.my-blogposts-header, .my-pages-header {
+  color: $white;
+  float: center;
+  font-size: 25px;
+}
+
+.welcome-chundlr {
+  text-align: center;
+}
+
+.user-pages, .user-posts, .show-page-content {
+  font-size: 20px;
 }

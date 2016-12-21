@@ -24,11 +24,17 @@ const indexPosts = () =>
 
 const indexMyPosts = () =>
   $.ajax({
-    url: config.host + '/blogposts/' + store.user._id,
+    url: config.host + '/blogposts/me/' + store.user._id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token,
     },
+  });
+
+  const showOtherUsersPosts = (id) =>
+  $.ajax({
+    url: config.host + '/blogposts/' + id,
+    method: 'GET',
   });
 
 const editPost = (id, data) =>
@@ -54,6 +60,7 @@ module.exports = {
   newPost,
   indexPosts,
   indexMyPosts,
+  showOtherUsersPosts,
   deletePost,
   editPost,
 

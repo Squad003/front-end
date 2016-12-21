@@ -1,0 +1,11 @@
+{{#each users as |user|}}
+
+<div class="row row-centered">
+
+  <div class="col-xs-4 col-centered box complete-user">
+    <button type="button" class="go-to-user-button btn btn-success" data-id="{{user._id}}">{{user.email}}</button>
+  </div>
+
+</div>
+
+{{/each}}
