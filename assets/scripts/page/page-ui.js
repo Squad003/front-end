@@ -3,6 +3,7 @@
 const showPages = require('../handlebars/show-pages.handlebars');
 const showUsersPages = require('../handlebars/show-users-pages.handlebars');
 
+
 const clearForms = () => {
   $('input').val('');
   $('textarea').val('');
@@ -26,6 +27,7 @@ const showOthersPageSuccess = (data) => {
   // console.log('data is ', data);
   $('.user-pages').html(showUsersPages(data));
   $('.show-page-content').hide();
+  $('.user-list').hide();
 };
 
 const editPageSuccess = () => {

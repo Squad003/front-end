@@ -102,14 +102,17 @@
 <div class="user-list"></div>
 
 <!--Dashboard Divs-->
-<h4 class="my-pages-header">My Pages</h4>
-<div class="show-pages"></div>
-<hr>
-<h4 class="my-blogposts-header">My Blog Posts</h4>
-<div class="show-all-my-posts"></div>
-
+<div class="my-pages-wrapper">
+  <h4 class="my-pages-header">My Pages</h4>
+  <div class="show-pages"></div>
+</div>
+<div class="my-posts-wrapper">
+  <h4 class="my-blogposts-header">My Blog Posts</h4>
+  <div class="show-all-my-posts"></div>
+</div>
 <!--Site Divs-->
-<div class="user-pages"></div>
+
+  <div class="user-pages"></div>
 <div class="user-posts"></div>
 <div class="show-page-content"></div>
 
@@ -282,8 +285,8 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="welcome-chundlr">Hey! Welcome to Chundlr! Sign up or in to get started, but if you're just here to browse, that's cool too!</div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="welcome-chundlr">Hey! Welcome to Chundlr! Sign up or in to get started, but if you're just here to browse, that's cool too!</div>
     <h4 class="modal-title" id="comboModalLabel">Sign Up</h4>
     </div>
     <div class="modal-body">
@@ -309,11 +312,11 @@
         <form class="sign-in-form">
          <div class="form-group">
            <label>E-Mail</label>
-           <input type="email" id="sign-in-email2" class="form-control" name="credentials[email]" placeholder="Email">
+           <input type="email" id="sign-in-email2" class="form-control auto-signin-email" name="credentials[email]" placeholder="Email">
          </div>
          <div class="form-group">
            <label for="exampleInputPassword1">Password</label>
-           <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
+           <input type="password" class="form-control auto-signin-pw" id="exampleInputPassword1" name="credentials[password]" placeholder="Password">
          </div>
          <button type="submit" class="btn btn-primary" id="sign-in-submit2">Submit</button>
          <button type="button" class="btn btn-default" data-dismiss="modal">Just Browsing!</button>

@@ -2,19 +2,23 @@
 
   <!-- Show Pages -->
 
-  <div>
+  <div class="show-pages-wrapper">
 
     <div>
-      <div class="content-{{page.id}} content page-name">title: {{page.title}} </div>
+      <div class="content-{{page.id}} content page-name"><p>
+        {{page.title}}</p>
+       </div>
     </div>
     <div>
-      <div class="content-{{page.id}} content page-due">body: {{page.content}}</div>
+      <div class="content-{{page.id}} content page-content">
+        <p>{{page.content}}</p>
+      </div>
     </div>
     <div>
-      <button type="button" class="delete-page-button btn btn-danger" data-id="{{page._id}}">Delete</button>
+      <button type="button" class="edit-page-button" data-id="{{page._id}}">Edit</button>
     </div>
     <div>
-      <button type="button" class="edit-page-button btn btn-success" data-id="{{page._id}}">Edit</button>
+      <button type="button" class="delete-page-button" data-id="{{page._id}}">Delete</button>
     </div>
   </div>
 

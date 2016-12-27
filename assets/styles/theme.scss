@@ -49,42 +49,148 @@ body {
   color: $pink;
 }
 
+//// show-pages handlebars ///
+.show-pages-wrapper {
+  border: 1px $white solid;
+  float: left;
+  height: 250px;
+  margin-left: 2%;
+  margin-top: 2%;
+  min-width: 200px;
+  overflow: scroll;
+  width: 30%;
+}
+////// show-pages handlebar END ///
 
-.show-my-posts {
-  top: 150px;
-  right: 10px;
-  position: fixed;
+
+/// My pages Start ///
+
+.my-pages-header {
+  text-align: center;
 }
 
-.show-posts {
-  top: 200px;
-  right: 10px;
-  position: fixed;
+.my-pages-wrapper {
+  border: 1px $babyblue solid;
+  overflow: auto;
 }
 
-.text-submit {
-  left: 250px;
-  top: 123px;
-  position: relative;
+.delete-page-button {
+  background-color: $bs-red;
+  border: 0;
+  border-radius: 8%;
+  color: $white;
+  float: right;
+  height: 30px;
+  width: 40%;
+  }
+
+.delete-page-button:hover {
+  background-color: $bs-hover-red;
 }
 
-.text-box {
-  left: 300px;
-  top: 50px;
-  position: relative;
+.edit-page-button {
+  background-color: $bs-green;
+  border: 0;
+  border-radius: 8%;
+  color: $white;
+  float: left;
+  height: 30px;
+  width: 40%;
 }
 
-.title-post {
-  left: 274px;
-  top: 45px;
-  position: relative;
+.edit-page-button:hover {
+  background-color: $bs-hover-green;
 }
+
+.page-name,
+.page-content {
+  text-align: center;
+}
+
+.page-name {
+  font-size: 20px;
+}
+
+.page-content {
+  font-size: 14px;
+}
+
+
+/// My pages end ///
+
+///my posts start///
+
+.my-blogposts-header {
+  text-align: center;
+}
+
+.show-posts-wrapper {
+  border: 1px $white solid;
+  margin: 10px auto;
+  overflow: auto;
+  width: 100%;
+}
+
+.delete-post-button {
+  background-color: $bs-red;
+  border: 0;
+  border-radius: 8%;
+  color: $white;
+  float: right;
+  height: 30px;
+  width: 40%;
+  }
+
+.delete-post-button:hover {
+  background-color: $bs-hover-red;
+}
+
+.edit-post-button {
+  background-color: $bs-green;
+  border: 0;
+  border-radius: 8%;
+  color: $white;
+  float: left;
+  height: 30px;
+  width: 40%;
+}
+
+.edit-post-button:hover {
+  background-color: $bs-hover-green;
+}
+
+.blogpost-title,
+.blogpost-content {
+  text-align: center;
+}
+
+.blogpost-title {
+  font-size: 20px;
+}
+
+.blogpost-content {
+  font-size: 14px;
+}
+
+// .show-my-posts {
+//   position: fixed;
+//   right: 10px;
+//   top: 150px;
+// }
+//
+// .show-posts {
+//   top: 200px;
+//   right: 10px;
+//   position: fixed;
+// }
+
 
 .user-list {
   float: right;
 }
 
-.my-blogposts-header, .my-pages-header {
+.my-blogposts-header,
+.my-pages-header {
   color: $white;
   float: center;
   font-size: 25px;
@@ -94,6 +200,50 @@ body {
   text-align: center;
 }
 
-.user-pages, .user-posts, .show-page-content {
+
+//show user pages//
+
+
+.user-pages {
+  border: 1px solid $white;
+  height: 50px;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+}
+
+.show-page-button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 8%;
+  color: $white;
+  height: 30px;
+  width: 10%;
+}
+
+.show-page-button:hover {
+  background-color: $bs-hover-green;
+}
+
+//end show user pages//
+
+//start show user posts//
+
+.show-user-posts-wrapper {
+  border: 1px solid $white;
+  margin: 40px auto 0;
+}
+
+.user-post-title,
+.user-post-body {
+  text-align: center;
+}
+
+.user-post-title {
   font-size: 20px;
+}
+
+.user-post-body {
+  font-size: 14px;
 }
