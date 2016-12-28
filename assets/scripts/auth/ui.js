@@ -67,6 +67,10 @@ const changePasswordSuccess = () => {
   // console.log('hi');
 };
 
+const searchUsersSuccess = (data) => {
+  $('.user-list').html(showUserList(data));
+};
+
 module.exports = {
   failure,
   signUpSuccess,
@@ -74,4 +78,5 @@ module.exports = {
   logOutSuccess,
   showUsersSuccess,
   changePasswordSuccess,
+  searchUsersSuccess,
 };

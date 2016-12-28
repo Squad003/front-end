@@ -56,6 +56,13 @@ const deletePost = (id) =>
     },
   });
 
+const searchPosts = (data) =>
+  $.ajax({
+    url: config.host + '/search-posts',
+    method: 'GET',
+    data,
+  });
+
 module.exports = {
   newPost,
   indexPosts,
@@ -63,5 +70,5 @@ module.exports = {
   showOtherUsersPosts,
   deletePost,
   editPost,
-
+  searchPosts,
 };

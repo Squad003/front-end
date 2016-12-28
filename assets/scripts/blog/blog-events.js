@@ -64,6 +64,14 @@ const onDeletePost = function (event) {
     .catch(ui.failure);
 };
 
+const onSearchPosts = function (event) {
+  event.preventDefault();
+  let data = getFormFields(this);
+  api.searchPosts(data)
+    .then(ui.searchPostSuccess)
+    .catch(ui.failure);
+};
+
 const addHandlers = () => {
   $('.blog-submit').on('submit', onNewPost);
   $('.show-posts').on('click', onIndexPosts);
@@ -71,6 +79,7 @@ const addHandlers = () => {
   $('.show-all-my-posts').on('click', '.delete-post-button', onDeletePost);
   $('.show-all-my-posts').on('click', '.edit-post-button', showUpdate);
   $('.show-all-my-posts').on('submit', '.blog-edit', onEditPost);
+  $('.search-form').on('submit', onSearchPosts);
 };
 
 module.exports = {

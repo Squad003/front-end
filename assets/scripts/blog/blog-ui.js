@@ -45,6 +45,10 @@ const deletePostSuccess = () => {
 
 };
 
+const searchPostSuccess = (data) => {
+  $('.user-posts').html(showUserPosts(data));
+};
+
 module.exports = {
   failure,
   success,
@@ -53,5 +57,5 @@ module.exports = {
   showOtherUsersPostsSuccess,
   deletePostSuccess,
   editPostSuccess,
-
+  searchPostSuccess,
 };

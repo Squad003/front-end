@@ -128,6 +128,11 @@
         <div class="modal-body">
           <form class="sign-up-form">
             <div class="form-group">
+             <label>UserName</label><br>
+             <input type="text" name="credentials[user_name]"
+                    placeholder=" User Name">
+           </div>
+            <div class="form-group">
               <label>E-Mail</label>
               <input type="email" id="sign-up-email" class="form-control" name="credentials[email]" placeholder="Email">
             </div>
@@ -251,6 +256,28 @@
     </div>
   </div>
 
+
+  <div class="search-div">
+    <form class="search-form">
+      <div class="form-group">
+        <input type="text" id="blogtitlesearch" name="blogpost[title]"
+         placeholder="Search by title">
+         <!-- <input type="hidden" name="item[user_id]" id="search-user-id-form"> -->
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
+    </form>
+  </div>
+
+  <div class="search-user-div">
+    <form class="search-user-form">
+      <div class="form-group">
+        <input type="text" id="usersearch" name="user[user_name]"
+         placeholder="Search by username">
+         <!-- <input type="hidden" name="item[user_id]" id="search-user-id-form"> -->
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
+    </form>
+  </div>
 
 
   <!-- Add New Blog Post Modal -->
