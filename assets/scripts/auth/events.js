@@ -80,6 +80,11 @@ const onShowUsers = function (event) {
 const onSearchUsers = function (event) {
   event.preventDefault();
   let data = getFormFields(this);
+  if (data.user.user_name==='') {
+    $('.search-user-fail').html('Oh No! The search field can&apos;t be empty!');
+    console.log('fail');
+    return;
+  }
   api.searchUsers(data)
     .then(ui.searchUsersSuccess)
     .catch(ui.failure);

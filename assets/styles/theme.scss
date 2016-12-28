@@ -15,7 +15,7 @@ h1 {
   text-align: center;
 }
 
-.dashboard-title:hover{
+.dashboard-title:hover {
   background-color: $blue;
   opacity: .5;
 
@@ -133,6 +133,13 @@ body {
   float: right;
 }
 
+.search-user-div {
+  float: left;
+}
+
+
+
+.search-user-button,
 .search-post-button {
   background-color: $bs-green;
   border: 0;
@@ -142,13 +149,9 @@ body {
   width: 100px;
 }
 
-.search-user-button {
-  background-color: $bs-green;
-  border: 0;
-  border-radius: 5px;
-  color: $white;
-  height: 30px;
-  width: 100px;
+.search-user-button:hover,
+.search-post-button:hover {
+  background-color: $bs-hover-green;
 }
 
 .search-post-form {
@@ -163,6 +166,15 @@ body {
   height: 30px;
 }
 
+.search-post-fail,
+.search-user-fail {
+  color: $white;
+  display: inline-block;
+}
+
+.search-user-fail {
+  margin-top: 16px;
+}
 
 
 /// My pages end ///
@@ -272,6 +284,12 @@ body {
 
 .show-page-button:hover {
   background-color: $bs-hover-green;
+}
+
+.show-page-content {
+  color: $white;
+  font-size: 16px;
+  text-align: center;
 }
 
 //end show user pages//

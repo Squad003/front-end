@@ -67,6 +67,10 @@ const onDeletePost = function (event) {
 const onSearchPosts = function (event) {
   event.preventDefault();
   let data = getFormFields(this);
+  if (data.blogpost.title==='') {
+    $('.search-post-fail').html('Oh No! The search field can&apos;t be empty!');
+    return;
+  }
   api.searchPosts(data)
     .then(ui.searchPostSuccess)
     .catch(ui.failure);
@@ -80,6 +84,7 @@ const addHandlers = () => {
   $('.show-all-my-posts').on('click', '.edit-post-button', showUpdate);
   $('.show-all-my-posts').on('submit', '.blog-edit', onEditPost);
   $('.search-form').on('submit', onSearchPosts);
+
 };
 
 module.exports = {

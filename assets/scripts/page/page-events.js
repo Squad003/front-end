@@ -86,6 +86,8 @@ const onPageClick = function (event) {
       // console.log('data is ', data);
       $('.show-page-content').html(data.page.content);
       $('.show-page-content').show();
+      $('.user-posts').hide();
+
     })
     .catch(ui.failure);
 
@@ -102,6 +104,11 @@ const showHide = () => {
   $('.other-user-data').hide();
 };
 
+const showHideBlog = () => {
+  $('.user-posts').show();
+  $('.show-page-content').hide();
+};
+
 
 const addHandlers = () => {
   $('.new-page-form').on('submit', onNewPage);
@@ -111,6 +118,7 @@ const addHandlers = () => {
   $('.user-list').on('click', '.go-to-user-button', onShowOtherUsersData);
   $('.user-pages').on('click', '.show-page-button', onPageClick);
   $('.dashboard-title').on('click', showHide);
+  $('.user-pages').on('click', '.show-other-blog-button', showHideBlog);
 };
 
 module.exports = {

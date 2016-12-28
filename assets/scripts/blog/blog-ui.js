@@ -50,6 +50,8 @@ const searchPostSuccess = (data) => {
   $('.user-posts').show();
   $('.user-data').hide();
   $('.other-user-data').show();
+  $('.search-post-fail').hide();
+  $('.search-user`-fail').hide();
 };
 
 module.exports = {

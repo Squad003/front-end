@@ -71,6 +71,8 @@ const searchUsersSuccess = (data) => {
   $('.user-list').html(showUserList(data));
   $('.user-list').show();
   $('.user-data').hide();
+  $('.search-user-fail').hide();
+  $('.search-post-fail').hide();
 };
 
 module.exports = {
