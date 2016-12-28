@@ -78,7 +78,33 @@
 
   <h1>Chundlr</h1>
 
-  <h3 class="dashboard-title">Your DashBoard</h3>
+  <button type="button" class="dashboard-title">Your DashBoard</button>
+
+
+<!-- SEARCH USERS AND POSTS-->
+  <div class="search-div">
+    <form class="search-form">
+      <div class="form-group">
+        <input type="text" id="blogtitlesearch" name="blogpost[title]"
+         placeholder="Search by title" class="search-post-form">
+         <!-- <input type="hidden" name="item[user_id]" id="search-user-id-form"> -->
+      <button type="submit" class="search-post-button">Search</button>
+    </div>
+    </form>
+  </div>
+
+  <div class="search-user-div">
+    <form class="search-user-form">
+      <div class="form-group">
+        <input type="text" id="usersearch" name="user[user_name]"
+         placeholder="Search by username" class="search-user-form">
+         <!-- <input type="hidden" name="item[user_id]" id="search-user-id-form"> -->
+         <button type="submit" class="search-user-button">Search</button>
+      </div>
+    </form>
+  </div>
+
+
 
   <!--Dashboard Buttons-->
   <div class="btn-group btn-group-justified">
@@ -88,9 +114,9 @@
   <div class="btn-group">
     <button type="button" class="btn btn-primary add-new-page" data-toggle="modal" data-target="#new-page-form">Add New Page</button>
   </div>
-    <div class="btn-group">
+  <!--  <div class="btn-group">
     <button type="button" class="btn btn-primary show-users">Show Users</button>
-  </div>
+  </div>-->
   </div>
 
 <!--
@@ -102,19 +128,22 @@
 <div class="user-list"></div>
 
 <!--Dashboard Divs-->
-<div class="my-pages-wrapper">
-  <h4 class="my-pages-header">My Pages</h4>
-  <div class="show-pages"></div>
-</div>
-<div class="my-posts-wrapper">
-  <h4 class="my-blogposts-header">My Blog Posts</h4>
-  <div class="show-all-my-posts"></div>
+<div class="user-data">
+  <div class="my-pages-wrapper">
+    <h4 class="my-pages-header">My Pages</h4>
+    <div class="show-pages"></div>
+  </div>
+  <div class="my-posts-wrapper">
+    <h4 class="my-blogposts-header">My Blog Posts</h4>
+    <div class="show-all-my-posts"></div>
+  </div>
 </div>
 <!--Site Divs-->
-
+<div class="other-user-data">
   <div class="user-pages"></div>
-<div class="user-posts"></div>
-<div class="show-page-content"></div>
+  <div class="user-posts"></div>
+  <div class="show-page-content"></div>
+</div>
 
   <!--Modals start-->
   <!--SIGN UP MODAL-->
@@ -129,7 +158,7 @@
           <form class="sign-up-form">
             <div class="form-group">
              <label>UserName</label><br>
-             <input type="text" name="credentials[user_name]"
+             <input type="text" name="credentials[user_name]" class="form-control"
                     placeholder=" User Name">
            </div>
             <div class="form-group">
@@ -257,28 +286,6 @@
   </div>
 
 
-  <div class="search-div">
-    <form class="search-form">
-      <div class="form-group">
-        <input type="text" id="blogtitlesearch" name="blogpost[title]"
-         placeholder="Search by title">
-         <!-- <input type="hidden" name="item[user_id]" id="search-user-id-form"> -->
-      </div>
-      <button type="submit" class="btn btn-default">Search</button>
-    </form>
-  </div>
-
-  <div class="search-user-div">
-    <form class="search-user-form">
-      <div class="form-group">
-        <input type="text" id="usersearch" name="user[user_name]"
-         placeholder="Search by username">
-         <!-- <input type="hidden" name="item[user_id]" id="search-user-id-form"> -->
-      </div>
-      <button type="submit" class="btn btn-default">Search</button>
-    </form>
-  </div>
-
 
   <!-- Add New Blog Post Modal -->
   <div class="modal fade" id="new-post-form" tabindex="-1" role="dialog" aria-labelledby="newPostModalLabel">
@@ -318,6 +325,11 @@
     </div>
     <div class="modal-body">
       <form class="sign-up-form">
+        <div class="form-group">
+         <label>Username</label><br>
+         <input type="text" name="credentials[user_name]" class="form-control"
+                placeholder=" User Name">
+       </div>
         <div class="form-group">
           <label>E-Mail</label>
           <input type="email" id="sign-up-email2" class="form-control" name="credentials[email]" placeholder="Email">

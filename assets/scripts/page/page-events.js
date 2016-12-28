@@ -96,6 +96,11 @@ const onPageClick = function (event) {
   // $('.content-' + id).html(this.page.content);
 };
 
+const showHide = () => {
+  $('.user-data').show();
+  $('.user-list').hide();
+  $('.other-user-data').hide();
+};
 
 
 const addHandlers = () => {
@@ -105,6 +110,7 @@ const addHandlers = () => {
   $('.show-pages').on('click', '.delete-page-button', onDeletePage);
   $('.user-list').on('click', '.go-to-user-button', onShowOtherUsersData);
   $('.user-pages').on('click', '.show-page-button', onPageClick);
+  $('.dashboard-title').on('click', showHide);
 };
 
 module.exports = {

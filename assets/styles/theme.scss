@@ -5,9 +5,20 @@ h1 {
 }
 
 .dashboard-title {
+  background-color: transparent;
+  border: 0;
+  border-radius: 5px;
   color: $white;
+  display: block;
   font-size: 20px;
+  margin: 0 auto;
   text-align: center;
+}
+
+.dashboard-title:hover{
+  background-color: $blue;
+  opacity: .5;
+
 }
 
 
@@ -114,6 +125,44 @@ body {
 .page-content {
   font-size: 14px;
 }
+
+
+//search forms//
+
+.search-div {
+  float: right;
+}
+
+.search-post-button {
+  background-color: $bs-green;
+  border: 0;
+  border-radius: 5px;
+  color: $white;
+  height: 30px;
+  width: 100px;
+}
+
+.search-user-button {
+  background-color: $bs-green;
+  border: 0;
+  border-radius: 5px;
+  color: $white;
+  height: 30px;
+  width: 100px;
+}
+
+.search-post-form {
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.search-user-form {
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+}
+
 
 
 /// My pages end ///

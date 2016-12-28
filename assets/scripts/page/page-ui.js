@@ -28,6 +28,8 @@ const showOthersPageSuccess = (data) => {
   $('.user-pages').html(showUsersPages(data));
   $('.show-page-content').hide();
   $('.user-list').hide();
+  $('.user-data').hide();
+  $('.user-posts').show();
 };
 
 const editPageSuccess = () => {

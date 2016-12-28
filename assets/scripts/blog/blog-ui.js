@@ -47,6 +47,9 @@ const deletePostSuccess = () => {
 
 const searchPostSuccess = (data) => {
   $('.user-posts').html(showUserPosts(data));
+  $('.user-posts').show();
+  $('.user-data').hide();
+  $('.other-user-data').show();
 };
 
 module.exports = {

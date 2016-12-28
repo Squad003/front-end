@@ -69,6 +69,8 @@ const changePasswordSuccess = () => {
 
 const searchUsersSuccess = (data) => {
   $('.user-list').html(showUserList(data));
+  $('.user-list').show();
+  $('.user-data').hide();
 };
 
 module.exports = {
