@@ -25,14 +25,18 @@ const onIndexMyPages = function (event) {
     .catch(ui.failure);
 };
 
-// const showUpdate = (e) => {
-//   let className = '.page-edit-' + $(e.target).data('id');
-//   $(className).removeClass('hidden');
-// };
-
 const showUpdate = (e) => {
   let className = '.page-edit-' + $(e.target).data('id');
-  $(className).modal('show');
+  let page = "#page-"  + $(e.target).data('id');
+  $(className).removeClass('hidden');
+  $(page).hide();
+};
+
+const hideUpdate = (e) => {
+  let className = '.page-edit-' + $(e.target).data('id');
+  let page = "#page-"  + $(e.target).data('id');
+  $(className).addClass('hidden');
+  $(page).show();
 };
 
 const onEditPage = function (event) {
@@ -113,7 +117,8 @@ const showHideBlog = () => {
 const addHandlers = () => {
   $('.new-page-form').on('submit', onNewPage);
   $('.show-pages').on('click', '.edit-page-button', showUpdate);
-  $('.show-pages').on('submit', '.edit-page-form', onEditPage);
+  $('.show-pages').on('click', '.hide-page-update', hideUpdate);
+  $('.show-pages').on('submit', '.page-edit', onEditPage);
   $('.show-pages').on('click', '.delete-page-button', onDeletePage);
   $('.user-list').on('click', '.go-to-user-button', onShowOtherUsersData);
   $('.user-pages').on('click', '.show-page-button', onPageClick);

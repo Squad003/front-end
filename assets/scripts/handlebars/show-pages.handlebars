@@ -3,66 +3,38 @@
   <!-- Show Pages -->
 
   <div class="show-pages-wrapper">
-
-    <div>
-      <div class="content-{{page.id}} content page-name"><p>
-        {{page.title}}</p>
-       </div>
-    </div>
-    <div>
-      <div class="content-{{page.id}} content page-content">
-        <p>{{page.content}}</p>
+      <div id=page-{{page._id}}>
+      <div>
+        <div class="content-{{page.id}} content page-name"><p>
+          {{page.title}}</p>
+         </div>
+      </div>
+      <div>
+        <div class="content-{{page.id}} content page-content">
+          <p>{{page.content}}</p>
+        </div>
+      </div>
+      <div>
+        <button type="button" class="edit-page-button" data-id="{{page._id}}">Edit</button>
+      </div>
+      <div>
+        <button type="button" class="delete-page-button" data-id="{{page._id}}">Delete</button>
       </div>
     </div>
-    <div>
-      <button type="button" class="edit-page-button" data-id="{{page._id}}">Edit</button>
-    </div>
-    <div>
-      <button type="button" class="delete-page-button" data-id="{{page._id}}">Delete</button>
-    </div>
-  </div>
 
-<!--
+
+
   <form class="page-edit-{{page._id}} page-edit hidden"  data-id="{{page._id}}">
-    <div class="row row-centered">
-      <div class="col-xs-3 col-centered box">
-        <div class="content text-center">
-          <input type="text" value="{{page.title}}" name="page[title]">
-          <textarea rows="4" cols="30" placeholder="put content here" name="page[content]">{{page.content}}</textarea>
-        </div>
-      </div>
-        <div class="col-xs-3 col-centered box">
-          <div class="content text-center"><button type="submit" class="edit-submit btn btn-success">Update</button></div>
-        </div>
-      </div>
-    </form>
--->
-
-  <!-- Edit Page Modal -->
-  <div class="modal fade page-edit-{{page._id}} edit-page-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="editPageModalLabel">Edit Page</h4>
-        </div>
-        <div class="modal-body">
-          <form class="edit-page-form" data-id="{{page._id}}">
-            <div class="form-group">
-              <label>Edit Page Title</label>
-              <input type="text" maxlength="25" class="form-control" name="page[title]" value="{{page.title}}">
-            </div>
-            <div class="form-group">
-              <label>Edit Page Content</label>
-              <textarea rows="4" cols="30" class="form-control" name="page[content]">{{page.content}}</textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" id="edit-page-submit">Submit</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          </form>
-          <div class="page-failure"></div>
-        </div>
-      </div>
+    <div class="form-group">
+      <label>Edit Page Title</label>
+        <input type="text" value="{{page.title}}" name="page[title]">
     </div>
+    <div class="form-group">
+      <label>Edit Page Body</label>
+        <textarea rows="4" cols="30" placeholder="put content here" name="page[content]">{{page.content}}</textarea>
+    </div>
+    <button type="submit" class="edit-submit btn btn-success">Update</button>
+    <button type="button" class="btn btn-default hide-page-update" data-id="{{page._id}}">Cancel</button>
+    </form>
   </div>
-
 {{/each}}

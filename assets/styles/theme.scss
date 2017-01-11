@@ -23,8 +23,8 @@ h1 {
 
 
 body {
-  background-image: url('./lookup.jpg');
-  background-repeat: repeat;
+  background-image: url('../../images/mountains.jpg');
+  // background-repeat: repeat;
   // background-size: 1080px 1080px;
   background-size: cover;
   }
@@ -71,12 +71,27 @@ body {
   overflow: scroll;
   width: 30%;
 }
+
+
+.page-edit {
+  border: 1px $white solid;
+  height: 250px;
+  margin-left: 2%;
+  margin-top: 2%;
+  min-width: 200px;
+  overflow: scroll;
+  width: 30%;
+  float: left;
+}
+
 ////// show-pages handlebar END ///
 
 
 /// My pages Start ///
 
 .my-pages-header {
+  color: $bs-hover-green;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -97,6 +112,9 @@ body {
 
 .delete-page-button:hover {
   background-color: $bs-hover-red;
+  opacity: .75;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
 }
 
 .edit-page-button {
@@ -111,6 +129,9 @@ body {
 
 .edit-page-button:hover {
   background-color: $bs-hover-green;
+  opacity: .75;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
 }
 
 .page-name,
@@ -152,6 +173,9 @@ body {
 .search-user-button:hover,
 .search-post-button:hover {
   background-color: $bs-hover-green;
+  opacity: .75;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
 }
 
 .search-post-form {
@@ -182,6 +206,8 @@ body {
 ///my posts start///
 
 .my-blogposts-header {
+  color: $bs-hover-green;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -204,6 +230,9 @@ body {
 
 .delete-post-button:hover {
   background-color: $bs-hover-red;
+  opacity: .75;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
 }
 
 .edit-post-button {
@@ -218,6 +247,9 @@ body {
 
 .edit-post-button:hover {
   background-color: $bs-hover-green;
+  opacity: .75;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
 }
 
 .blogpost-title,
@@ -250,12 +282,6 @@ body {
   float: right;
 }
 
-.my-blogposts-header,
-.my-pages-header {
-  color: $white;
-  float: center;
-  font-size: 25px;
-}
 
 .welcome-chundlr {
   text-align: center;
@@ -284,6 +310,9 @@ body {
 
 .show-page-button:hover {
   background-color: $bs-hover-green;
+  opacity: .75;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
 }
 
 .show-page-content {

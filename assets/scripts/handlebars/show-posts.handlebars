@@ -1,90 +1,37 @@
 {{#each blogposts as |blogpost|}}
 
 <div class="show-posts-wrapper">
-  <div>
+  <div id="post-{{blogpost._id}}">
     <div>
-      <div class="content blogpost-title">
-        <p>{{blogpost.title}}</p>
-       </div>
-      <div class="content blogpost-content">
-        <p>{{blogpost.content}}</p>
+      <div>
+        <div class="content blogpost-title">
+          <p>{{blogpost.title}}</p>
+         </div>
+        <div class="content blogpost-content">
+          <p>{{blogpost.content}}</p>
+        </div>
+      </div>
+    </div>
+      <div>
+        <button type="button" class="edit-post-button" data-id="{{blogpost._id}}">Edit</button>
+      </div>
+      <div>
+        <button type="button" class="delete-post-button" data-id="{{blogpost._id}}">Delete</button>
       </div>
     </div>
   </div>
-    <div>
-      <button type="button" class="edit-post-button" data-id="{{blogpost._id}}">Edit</button>
+
+  <form class="hidden blog-edit" data-id="{{blogpost._id}}" id="edit-blog-{{blogpost._id}}">
+    <div class="form-group">
+      <label>Edit Post Title</label>
+      <input type="text" maxlength="25" class="form-control" name="blogpost[title]" value="{{blogpost.title}}">
     </div>
-    <div>
-      <button type="button" class="delete-post-button" data-id="{{blogpost._id}}">Delete</button>
+    <div class="form-group">
+      <label>Edit Post Content</label>
+      <textarea rows="4" cols="30" class="form-control" name="blogpost[content]">{{blogpost.content}}</textarea>
     </div>
-  </div>
-
-  <!--Edit blogpost Modal-->
-   <div class="modal fade blog-edit-{{blogpost._id}} edit-post-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-     <div class="modal-dialog" role="document">
-       <div class="modal-content">
-         <div class="modal-header">
-           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-           <h4 class="modal-title" id="editPageModalLabel">Edit Page</h4>
-         </div>
-         <div class="modal-body">
-           <form class="blog-edit" data-id="{{blogpost._id}}">
-             <div class="form-group">
-               <label>Edit Page Title</label>
-               <input type="text" maxlength="25" class="form-control" name="blogpost[title]" value="{{blogpost.title}}">
-             </div>
-             <div class="form-group">
-               <label>Edit Page Content</label>
-               <textarea rows="4" cols="30" class="form-control" name="blogpost[content]">{{blogpost.content}}</textarea>
-             </div>
-             <button type="submit" class="btn btn-primary" id="edit-post-submit">Submit</button>
-             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-           </form>
-           <div class="post-failure"></div>
-         </div>
-       </div>
-     </div>
-   </div>
-
-   <!--
-     <div class="container">
-       <div class="row row-centered">
-
-         <div class="col-centered box col-sm-6">
-           <div class="content">title: {{blogpost.title}} </div>
-           <div class="content">body: {{blogpost.content}}</div>
-         </div>
-         <div class="col-centered box col-sm-6">
-
-         </div>
-       </div>
-         <div class="row row-centered">
-         <div class="col-xs-2 col-centered box">
-           <button type="button" class="delete-post-button btn btn-danger" data-id="{{blogpost._id}}">Delete</button>
-         </div>
-         <div class="col-xs-2 col-centered box">
-           <button type="button" class="edit-post-button btn btn-success" data-id="{{blogpost._id}}">Edit</button>
-         </div>
-       </div>
-     </div>
-   -->
-
-
-  <!--
-    <form class="blog-edit-{{blogpost._id}} blog-edit hidden"  data-id="{{blogpost._id}}">
-      <div class="row row-centered">
-        <div class="col-xs-3 col-centered box">
-          <div class="content text-center">
-            <input type="text" placeholder="put title here" name="blogpost[title]">
-            <textarea rows="4" cols="30" placeholder="put content here" name="blogpost[content]"></textarea>
-          </div>
-        </div>
-          <div class="col-xs-3 col-centered box">
-            <div class="content text-center"><button type="submit" class="edit-submit btn btn-success">Update</button></div>
-          </div>
-        </div>
-      </form>
-    -->
-
-
-{{/each}}
+    <button type="submit" class="btn btn-primary" data-edit="{{blogpost._id}}">Submit</button>
+    <button type="button" class="btn btn-default cancel-button" data-id="{{blogpost._id}}">Cancel</button>
+  </form>
+  <div class="post-failure"></div>
+    {{/each}}
