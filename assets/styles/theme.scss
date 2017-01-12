@@ -1,5 +1,5 @@
 h1 {
-  color: $white;
+  color: $bs-hover-green;
   font-size: 40px;
   text-align: center;
 }
@@ -8,7 +8,7 @@ h1 {
   background-color: transparent;
   border: 0;
   border-radius: 5px;
-  color: $white;
+  color: $bs-hover-green;
   display: block;
   font-size: 20px;
   margin: 0 auto;
@@ -62,6 +62,7 @@ body {
 
 //// show-pages handlebars ///
 .show-pages-wrapper {
+  color: $navy;
   border: 1px $white solid;
   float: left;
   height: 250px;
@@ -96,7 +97,7 @@ body {
 }
 
 .my-pages-wrapper {
-  border: 1px $babyblue solid;
+  // border: 1px $babyblue solid;
   overflow: auto;
 }
 
@@ -215,7 +216,10 @@ body {
   border: 1px $white solid;
   margin: 10px auto;
   overflow: auto;
-  width: 100%;
+  width: 66%;
+  background-color: steelblue;
+  opacity: .7;
+  color: $white;
 }
 
 .delete-post-button {
@@ -301,7 +305,7 @@ body {
 }
 
 .show-page-button {
-  background-color: transparent;
+  background-color: $bs-green;
   border: 0;
   border-radius: 5px;
   color: $white;
@@ -328,6 +332,9 @@ body {
 .show-user-posts-wrapper {
   border: 1px solid $white;
   margin: 40px auto 0;
+  background-color: steelblue;
+  opacity: .89;
+  width: 66%;
 }
 
 .user-post-title,
