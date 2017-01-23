@@ -42,10 +42,18 @@ const showUsers = () =>
     method: 'GET',
   });
 
+const searchUsers = (data) =>
+  $.ajax({
+    url: config.host + '/search-users',
+    method: 'GET',
+    data,
+  });
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   showUsers,
+  searchUsers,
 };

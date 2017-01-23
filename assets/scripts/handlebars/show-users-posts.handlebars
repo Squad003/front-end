@@ -1,13 +1,31 @@
 {{#each blogposts as |blogpost|}}
 
   <!-- Show Pages -->
-  <div class="row row-centered">
-    <div class="col-xs-4 col-centered box">
-      <div class="content-{{blogpost.id}} content page-name">blog: {{blogpost.title}} </div>
-    </div>
-    <div class="col-xs-4 col-centered box">
-      <div class="content-{{blogpost.id}} content page-due">content: {{blogpost.content}}</div>
-    </div>
+
+<div class="show-user-posts-wrapper">
+  <div class="content-{{blogpost.id}} content user-post-title">
+    <p> {{blogpost.title}} </p>
   </div>
+  <div class="content-{{blogpost.id}} content user-post-body">
+    <p>{{blogpost.content}}</p>
+  </div>
+</div>
+
+
 
 {{/each}}
+
+<!--
+<div class="row row-centered">
+  <div class="col-xs-4 col-centered box">
+    <div class="content-{{blogpost.id}} content page-name">
+      <p> {{blogpost.title}} </p>
+      </div>
+  </div>
+  <div class="col-xs-4 col-centered box">
+    <div class="content-{{blogpost.id}} content page-due">
+      <p>{{blogpost.content}}</p>
+    </div>
+  </div>
+</div>
+-->

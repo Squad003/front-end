@@ -1,20 +1,22 @@
+
+<button type="button" data-id="{{page._id}}" class="show-page-button show-other-blog-button">Blog</button>
+
 {{#each pages as |page|}}
 
   <!-- Show Pages -->
-  <div>
-    <div class>
-    <div >
-      <button type="button" data-id="{{page._id}}"class="btn btn-success show-page-button btn-group btn-group-justified">{{page.title}}</button>
-    </div>
 
-    </div>
+<button type="button" data-id="{{page._id}}" class="show-page-button">{{page.title}}</button>
 
-    <!--
-    <div class="col-xs-4 col-centered box">
-      <div class="content-{{page._id}} content">content: {{page.content}}</div>
-
-    </div>
-  -->
-  </div>
 
 {{/each}}
+
+
+
+
+
+<!--
+<div class="col-xs-4 col-centered box">
+<div class="content-{{page._id}} content">content: {{page.content}}</div>
+
+</div>
+-->

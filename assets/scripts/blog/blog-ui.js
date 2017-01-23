@@ -14,8 +14,9 @@ const success = () => {
   $('.post-failure').hide();
 };
 
-const failure = () => {
+const failure = (error) => {
   $('.post-failure').html('Enter title and content');
+  console.error("error is", error);
 };
 
 const indexPostsSuccess = () => {
@@ -37,12 +38,22 @@ const showOtherUsersPostsSuccess = (data) => {
 };
 
 const editPostSuccess = (data) => {
-  // console.log('data is', data);
   $('.modal-backdrop').remove();
+  // $('edit-post-modal').hide();
+  console.log("data is", data);
 };
 
 const deletePostSuccess = () => {
 
+};
+
+const searchPostSuccess = (data) => {
+  $('.user-posts').html(showUserPosts(data));
+  $('.user-posts').show();
+  $('.user-data').hide();
+  $('.other-user-data').show();
+  $('.search-post-fail').hide();
+  $('.search-user`-fail').hide();
 };
 
 module.exports = {
@@ -53,5 +64,5 @@ module.exports = {
   showOtherUsersPostsSuccess,
   deletePostSuccess,
   editPostSuccess,
-
+  searchPostSuccess,
 };

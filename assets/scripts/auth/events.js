@@ -77,12 +77,26 @@ const onShowUsers = function (event) {
     .catch(ui.error);
 };
 
+const onSearchUsers = function (event) {
+  event.preventDefault();
+  let data = getFormFields(this);
+  if (data.user.user_name==='') {
+    $('.search-user-fail').html('Oh No! The search field can&apos;t be empty!');
+    console.log('fail');
+    return;
+  }
+  api.searchUsers(data)
+    .then(ui.searchUsersSuccess)
+    .catch(ui.failure);
+};
+
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp);
   $('.sign-in-form').on('submit', onSignIn);
   $('.change-password-form').on('submit', onChangePassword);
   $('.log-out').on('submit', onSignOut);
   $('.show-users').on('click', onShowUsers);
+  $('.search-user-form').on('submit', onSearchUsers);
 };
 
 module.exports = {
