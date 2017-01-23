@@ -40,8 +40,8 @@ webpackJsonp([0],[
 	  $('.my-blogposts-header').hide();
 	  $('#combo-form').modal('show');
 
-	  $('.auto-signin-email').val('alex@kradin.com');
-	  $('.auto-signin-pw').val('1');
+	  // $('.auto-signin-email').val('alex@kradin.com');
+	  // $('.auto-signin-pw').val('1');
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
